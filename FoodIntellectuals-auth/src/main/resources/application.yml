@@ -13,3 +13,9 @@ spring:
 
 server:
   port: 9000
+
+
+qiniu:
+  access-key: LikfBT7mUbeNJdVKln38fUddN-ScosbVeCugQQIJ
+  secret-key: cOo32bodbnQiwiCIK5CaX1Z02jdQEN4rUU958C5n
+  bucket-name: food-intellectuals

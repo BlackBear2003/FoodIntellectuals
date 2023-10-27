@@ -1,9 +1,10 @@
 package host.luke.FoodIntellectuals.auth.service;
 
+import host.luke.FoodIntellectuals.auth.entity.User;
 import host.luke.FoodIntellectuals.auth.repository.UserRepository;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class UserService {
 
   private final UserRepository userRepository;
@@ -14,5 +15,13 @@ public class UserService {
 
   public boolean isUnionIdRegistered(String unionId) {
     return userRepository.existsByUnionIdEquals(unionId);
+  }
+
+  public User findByUnionId(String unionId) {
+    return userRepository.findByUnionId(unionId);
+  }
+
+  public User save(User user) {
+    return userRepository.save(user);
   }
 }
