@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="finish first task">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="change git ignore">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_341.jdk/Contents/Home/src.zip!/java/io/InputStream.java" root0="SKIP_INSPECTION" />
@@ -82,7 +82,7 @@
       <workItem from="1698386579687" duration="13896000" />
       <workItem from="1698421627379" duration="4099000" />
       <workItem from="1698425997803" duration="1327000" />
-      <workItem from="1698427339504" duration="1049000" />
+      <workItem from="1698427339504" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -112,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698427735403</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change git ignore">
+      <created>1698428630892</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698428630892</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +140,7 @@
     <MESSAGE value="." />
     <MESSAGE value="finish unionId/if-registered" />
     <MESSAGE value="finish first task" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish first task" />
+    <MESSAGE value="change git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="change git ignore" />
   </component>
 </project>
