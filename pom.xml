@@ -4,25 +4,29 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>host.luke</groupId>
+  <groupId>host.luke.FoodIntellectuals</groupId>
   <artifactId>FoodIntellectuals</artifactId>
-  <version>0.0.1</version>
+  <version>${revision}</version>
+  <modules>
+    <module>FoodIntellectuals-auth</module>
+    <module>FoodIntellectuals-common</module>
+  </modules>
 
   <packaging>pom</packaging>
 
   <properties>
+    <revision>0.0.1</revision>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <springcloud.version>2022.0.4</springcloud.version>
-    <springdoc.version>2.0.0</springdoc.version>
+    <spring-boot.version>2.7.11</spring-boot.version>
   </properties>
 
-
-  <!-- 引入SpringCloud依赖 -->
   <dependencyManagement>
+    <!--spring framework -->
     <dependencies>
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -30,6 +34,19 @@
         <version>${springcloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <!--food-intellectuals module -->
+      <dependency>
+        <groupId>host.luke.FoodIntellectuals</groupId>
+        <artifactId>FoodIntellectuals-common</artifactId>
+        <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: FoodIntellectuals-auth
+  datasource:
+    url: jdbc:mysql://81.68.212.127:3306/FoodIntellectualsDB?characterEncoding=utf8
+    username: root
+    password: onelastkiss
+  jpa:
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 9000
