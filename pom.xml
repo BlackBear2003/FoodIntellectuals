@@ -28,6 +28,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <springcloud.version>2022.0.4</springcloud.version>
+    <mysql-connector-java.version>8.0.25</mysql-connector-java.version>
   </properties>
 
   <dependencyManagement>
@@ -50,6 +51,12 @@
         <groupId>host.luke.FoodIntellectuals</groupId>
         <artifactId>FoodIntellectuals-common</artifactId>
         <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>${mysql-connector-java.version}</version>
       </dependency>
 
       <dependency>
