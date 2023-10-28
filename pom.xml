@@ -8,17 +8,11 @@
   <artifactId>FoodIntellectuals</artifactId>
   <version>${revision}</version>
   <packaging>pom</packaging>
+
   <modules>
     <module>FoodIntellectuals-auth</module>
     <module>FoodIntellectuals-common</module>
   </modules>
-
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <!-- SpringBoot版本 -->
-    <version>2.7.11</version>
-  </parent>
 
   <properties>
     <revision>0.0.1</revision>
@@ -27,8 +21,11 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+
+    <springboot.version>2.7.11</springboot.version>
     <springcloud.version>2022.0.4</springcloud.version>
     <mysql-connector-java.version>8.0.25</mysql-connector-java.version>
+    <springfox.version>3.0.0</springfox.version>
   </properties>
 
   <dependencyManagement>
@@ -52,6 +49,27 @@
         <artifactId>FoodIntellectuals-common</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>${springboot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>${springboot.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+        <version>${springboot.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-boot-starter</artifactId>
+        <version>${springfox.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>mysql</groupId>
@@ -73,6 +91,7 @@
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
+          <version>${springboot.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>

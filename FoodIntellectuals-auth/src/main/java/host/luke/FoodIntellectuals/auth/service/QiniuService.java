@@ -25,6 +25,8 @@ public class QiniuService {
   private String secretKey;
   @Value("${qiniu.bucket-name}")
   private String bucketName;
+  @Value("${qiniu.host-name}")
+  private String hostName;
 
   @PostConstruct
   public void init() {
@@ -48,7 +50,7 @@ public class QiniuService {
       Response response = uploadManager.put(inputStream, key, upToken, null, null);
       //解析上传成功的结果
       DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
-      return putRet.key;
+      return hostName + "/" + putRet.key;
     } catch (QiniuException ex) {
       ex.printStackTrace();
       return null;
