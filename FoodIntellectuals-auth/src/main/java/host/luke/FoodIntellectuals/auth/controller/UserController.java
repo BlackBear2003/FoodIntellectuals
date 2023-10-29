@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.auth.controller;
 
 import host.luke.FoodIntellectuals.auth.entity.User;
+import host.luke.FoodIntellectuals.auth.entity.vo.RegisterUserVO;
 import host.luke.FoodIntellectuals.auth.service.QiniuService;
 import host.luke.FoodIntellectuals.auth.service.UserService;
 import host.luke.FoodIntellectuals.auth.service.WechatService;
@@ -47,18 +48,17 @@ public class UserController {
   }
 
   @PostMapping("")
-  public ResponseDto<User> register(@RequestParam String unionId, @RequestParam String username,
-      @RequestBody String avatar) {
+  public ResponseDto<User> register(@RequestBody RegisterUserVO registerUserVO) {
 
-    if (userService.isUnionIdRegistered(unionId)) {
+    if (userService.isUnionIdRegistered(registerUserVO.getUnionId())) {
       return new ResponseDto<>(403, "UnionId has been registered!", null);
     }
 
     User user = new User();
-    user.setUnionId(unionId);
-    user.setUsername(username);
+    user.setUnionId(registerUserVO.getUnionId());
+    user.setUsername(registerUserVO.getUsername());
 
-    String avatarUrl = qiniuService.uploadImg(avatar);
+    String avatarUrl = qiniuService.uploadImg(registerUserVO.getAvatarBase64());
 
     if (avatarUrl == null) {
       return new ResponseDto<>(500, "failed to upload", null);

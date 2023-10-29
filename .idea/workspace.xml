@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="change git ignore">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/config/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/config/HttpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/config/SpringFoxConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/WechatService.java" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="finish ssl;&#10;add a dev http port;">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/vo/RegisterUserVO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/QiniuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/QiniuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,24 +38,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "/Users/weizhile/Developer/FZU-SE/FoodIntellectuals/FoodIntellectuals-auth/src/main/resources",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.13175231",
-    "spring.configuration.checksum": "3bcbe2f5b5f9c59c6aa95c2ddaf8d660"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/weizhile/Developer/FZU-SE/FoodIntellectuals/FoodIntellectuals-auth/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.13175231&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3bcbe2f5b5f9c59c6aa95c2ddaf8d660&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/resources" />
@@ -106,7 +97,8 @@
       <workItem from="1698421627379" duration="4099000" />
       <workItem from="1698425997803" duration="1327000" />
       <workItem from="1698427339504" duration="2485000" />
-      <workItem from="1698474595734" duration="19963000" />
+      <workItem from="1698474595734" duration="20384000" />
+      <workItem from="1698552544509" duration="2117000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -157,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698429534530</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="finish ssl;&#10;add a dev http port;">
+      <created>1698514519913</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698514519913</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +178,7 @@
     <MESSAGE value="finish unionId/if-registered" />
     <MESSAGE value="finish first task" />
     <MESSAGE value="change git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="change git ignore" />
+    <MESSAGE value="finish ssl;&#10;add a dev http port;" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish ssl;&#10;add a dev http port;" />
   </component>
 </project>
