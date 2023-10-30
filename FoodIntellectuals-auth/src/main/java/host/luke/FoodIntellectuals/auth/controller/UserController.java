@@ -1,6 +1,6 @@
 package host.luke.FoodIntellectuals.auth.controller;
 
-import host.luke.FoodIntellectuals.auth.entity.User;
+import host.luke.FoodIntellectuals.common.entity.User;
 import host.luke.FoodIntellectuals.auth.entity.dto.GetUnionIdDTO;
 import host.luke.FoodIntellectuals.auth.entity.vo.RegisterUserVO;
 import host.luke.FoodIntellectuals.auth.service.QiniuService;

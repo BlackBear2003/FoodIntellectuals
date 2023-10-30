@@ -1,4 +1,4 @@
-package host.luke.FoodIntellectuals.auth.entity;
+package host.luke.FoodIntellectuals.common.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

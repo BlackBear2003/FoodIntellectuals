@@ -1,6 +1,6 @@
 package host.luke.FoodIntellectuals.auth.service;
 
-import host.luke.FoodIntellectuals.auth.entity.User;
+import host.luke.FoodIntellectuals.common.entity.User;
 import host.luke.FoodIntellectuals.auth.repository.UserRepository;
 import org.springframework.stereotype.Service;
 

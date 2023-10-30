@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="enhance register API">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/dto/GetUnionIdDTO.java" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="fix missing jpa annotation">
+      <change afterPath="$PROJECT_DIR$/scripts/sql/RDBAC.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/QiniuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/QiniuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/WechatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/WechatService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +104,8 @@
       <workItem from="1698425997803" duration="1327000" />
       <workItem from="1698427339504" duration="2485000" />
       <workItem from="1698474595734" duration="20384000" />
-      <workItem from="1698552544509" duration="9407000" />
+      <workItem from="1698552544509" duration="10034000" />
+      <workItem from="1698649539606" duration="4170000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -166,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698555908065</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fix missing jpa annotation">
+      <created>1698648246804</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698648246804</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +201,7 @@
     <MESSAGE value="change git ignore" />
     <MESSAGE value="finish ssl;&#10;add a dev http port;" />
     <MESSAGE value="enhance register API" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance register API" />
+    <MESSAGE value="fix missing jpa annotation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix missing jpa annotation" />
   </component>
 </project>
