@@ -1,11 +1,13 @@
 package host.luke.FoodIntellectuals.auth.controller;
 
 import host.luke.FoodIntellectuals.auth.entity.User;
+import host.luke.FoodIntellectuals.auth.entity.dto.GetUnionIdDTO;
 import host.luke.FoodIntellectuals.auth.entity.vo.RegisterUserVO;
 import host.luke.FoodIntellectuals.auth.service.QiniuService;
 import host.luke.FoodIntellectuals.auth.service.UserService;
 import host.luke.FoodIntellectuals.auth.service.WechatService;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
+import java.util.Objects;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -35,15 +37,18 @@ public class UserController {
   }
 
   @GetMapping("/unionId")
-  public ResponseDto<String> getUnionId(@RequestParam String jsCode) {
+  public ResponseDto<GetUnionIdDTO> getUnionId(@RequestParam String jsCode) {
 
-    String json = wechatService.getUnionIdByJsCode(jsCode);
-    return new ResponseDto<>(200, null, json);
+    GetUnionIdDTO res = wechatService.getUnionIdByJsCode(jsCode);
+    return new ResponseDto<>(200, null, res);
   }
 
   @GetMapping("")
   public ResponseDto<User> getUserByUnionId(@RequestParam String unionId) {
     User user = userService.findByUnionId(unionId);
+    if (Objects.isNull(user)) {
+      return new ResponseDto<>(404, "not such user", null);
+    }
     return new ResponseDto<>(200, null, user);
   }
 

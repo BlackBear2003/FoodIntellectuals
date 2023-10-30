@@ -1,6 +1,8 @@
 package host.luke.FoodIntellectuals.auth.service;
 
 import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONUtil;
+import host.luke.FoodIntellectuals.auth.entity.dto.GetUnionIdDTO;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.beans.factory.annotation.Value;
@@ -18,7 +20,7 @@ public class WechatService {
 
   final String grantType = "authorization-code";
 
-  public String getUnionIdByJsCode(String jsCode) {
+  public GetUnionIdDTO getUnionIdByJsCode(String jsCode) {
 
     Map<String, Object> params = new HashMap();
     params.put("appid", appId);
@@ -27,7 +29,8 @@ public class WechatService {
     params.put("grant_type", grantType);
 
     String response = HttpUtil.get(getUnionIdUrl, params);
-    return response;
+    GetUnionIdDTO getUnionIdDTO = JSONUtil.toBean(response, GetUnionIdDTO.class);
+    return getUnionIdDTO;
   }
 
 

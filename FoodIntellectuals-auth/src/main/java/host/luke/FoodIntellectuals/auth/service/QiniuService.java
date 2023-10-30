@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.auth.service;
 
 
+import cn.hutool.core.codec.Base64;
 import cn.hutool.core.io.IoUtil;
 import com.google.gson.Gson;
 import com.qiniu.common.QiniuException;
@@ -45,7 +46,8 @@ public class QiniuService {
     String key = null;
     Auth auth = Auth.create(accessKey, secretKey);
     String upToken = auth.uploadToken(bucketName);
-    ByteArrayInputStream inputStream = IoUtil.toStream(base64Img, StandardCharsets.UTF_8);
+    byte[] img = Base64.decode(base64Img);
+    ByteArrayInputStream inputStream = IoUtil.toStream(img);
     try {
       Response response = uploadManager.put(inputStream, key, upToken, null, null);
       //解析上传成功的结果
