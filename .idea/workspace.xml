@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="fix missing jpa annotation">
-      <change afterPath="$PROJECT_DIR$/scripts/sql/RDBAC.sql" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="enhance module dependencies">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/FoodIntellectualsBizApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/config/HttpConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/config/SpringFoxConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/controller/CanteenController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/CanteenRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/CanteenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/CanteenServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/FoodIntellectualsCommonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/FoodIntellectualsAuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth/FoodIntellectualsAuthApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,31 +51,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/weizhile/Developer/FZU-SE/FoodIntellectuals/FoodIntellectuals-auth/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.13175231&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;3bcbe2f5b5f9c59c6aa95c2ddaf8d660&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "/Users/weizhile/Developer/FZU-SE/FoodIntellectuals/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/config",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.13175231",
+    "spring.configuration.checksum": "acc33134025fb94ba24ff7c00306d74e"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/config" />
+      <recent name="$PROJECT_DIR$/FoodIntellectuals-biz/src/main" />
       <recent name="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/resources" />
       <recent name="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/java/host/luke/FoodIntellectuals/auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="host.luke.FoodIntellectuals.biz" />
     </key>
   </component>
   <component name="RunManager">
@@ -105,7 +116,10 @@
       <workItem from="1698427339504" duration="2485000" />
       <workItem from="1698474595734" duration="20384000" />
       <workItem from="1698552544509" duration="10034000" />
-      <workItem from="1698649539606" duration="4170000" />
+      <workItem from="1698649539606" duration="6060000" />
+      <workItem from="1698834687853" duration="1524000" />
+      <workItem from="1699015638112" duration="598000" />
+      <workItem from="1699344716123" duration="10840000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -177,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698648246804</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="enhance module dependencies">
+      <created>1698669649540</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698669649540</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +223,7 @@
     <MESSAGE value="finish ssl;&#10;add a dev http port;" />
     <MESSAGE value="enhance register API" />
     <MESSAGE value="fix missing jpa annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix missing jpa annotation" />
+    <MESSAGE value="enhance module dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance module dependencies" />
   </component>
 </project>

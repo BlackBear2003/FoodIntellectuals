@@ -12,6 +12,7 @@
   <modules>
     <module>FoodIntellectuals-auth</module>
     <module>FoodIntellectuals-common</module>
+    <module>FoodIntellectuals-biz</module>
   </modules>
 
   <properties>

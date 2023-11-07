@@ -70,11 +70,11 @@ CREATE TABLE `Food`
 
 
 DROP TABLE IF EXISTS `FoodTag`;
-
 CREATE TABLE `FoodTag`
 (
     `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
     `FoodId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
+    `TagType`  tinyint unsigned NOT NULL DEFAULT 0 COMMENT 'Tag类型，0代表种类tag 1代表口味tag',
     `TagName` varchar(32) NOT NULL DEFAULT 'default' COMMENT 'Tag名称',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品Tag表';

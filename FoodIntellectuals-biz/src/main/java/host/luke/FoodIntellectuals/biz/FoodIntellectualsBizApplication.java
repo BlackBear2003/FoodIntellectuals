@@ -1,4 +1,4 @@
-package host.luke.FoodIntellectuals.auth;
+package host.luke.FoodIntellectuals.biz;
 
 import host.luke.FoodIntellectuals.common.FoodIntellectualsCommonConfig;
 import org.springframework.boot.SpringApplication;
@@ -6,12 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses = {FoodIntellectualsCommonConfig.class,
-
-    FoodIntellectualsAuthApplication.class})
-public class FoodIntellectualsAuthApplication {
+@ComponentScan(basePackageClasses = {FoodIntellectualsBizApplication.class,
+    FoodIntellectualsCommonConfig.class})
+public class FoodIntellectualsBizApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(FoodIntellectualsAuthApplication.class, args);
+    SpringApplication.run(FoodIntellectualsBizApplication.class, args);
   }
+
 }
