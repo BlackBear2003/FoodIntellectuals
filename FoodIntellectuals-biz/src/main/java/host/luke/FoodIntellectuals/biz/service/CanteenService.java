@@ -5,6 +5,6 @@ import java.util.List;
 
 public interface CanteenService {
 
-  List<Canteen> findAll();
+  List<Canteen> findAll(int page, int size);
 
 }

@@ -11,14 +11,16 @@ public class FoodTag {
     private Long id;
     private Long foodId;
     private String tagName;
+    private Integer tagType;
 
     public FoodTag() {
     }
 
-    public FoodTag(Long id, Long foodId, String tagName) {
+    public FoodTag(Long id, Long foodId, String tagName, Integer tagType) {
         this.id = id;
         this.foodId = foodId;
         this.tagName = tagName;
+        this.tagType = tagType;
     }
 
     public Long getId() {
@@ -43,5 +45,13 @@ public class FoodTag {
 
     public void setTagName(String tagName) {
         this.tagName = tagName;
+    }
+
+    public Integer getTagType() {
+        return tagType;
+    }
+
+    public void setTagType(Integer tagType) {
+        this.tagType = tagType;
     }
 }
