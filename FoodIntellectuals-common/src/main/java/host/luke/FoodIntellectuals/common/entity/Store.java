@@ -1,6 +1,8 @@
 package host.luke.FoodIntellectuals.common.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -8,13 +10,12 @@ import javax.persistence.Table;
 @Table(name = "Store")
 public class Store {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private Long canteenId;
-
     private String storeName;
     private String intro;
     private String location;
+
     public Store() {
     }
 
@@ -31,14 +32,6 @@ public class Store {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getCanteenId() {
-        return canteenId;
-    }
-
-    public void setCanteenId(Long canteenId) {
-        this.canteenId = canteenId;
     }
 
     public String getStoreName() {
