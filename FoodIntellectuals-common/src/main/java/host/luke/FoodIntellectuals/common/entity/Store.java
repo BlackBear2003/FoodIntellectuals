@@ -9,10 +9,12 @@ import javax.persistence.Table;
 public class Store {
     @Id
     private Long id;
+
+    private Long canteenId;
+
     private String storeName;
     private String intro;
     private String location;
-
     public Store() {
     }
 
@@ -29,6 +31,14 @@ public class Store {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getCanteenId() {
+        return canteenId;
+    }
+
+    public void setCanteenId(Long canteenId) {
+        this.canteenId = canteenId;
     }
 
     public String getStoreName() {
