@@ -7,4 +7,15 @@ public interface FoodTagService {
 
   List<FoodTag> findByFoodId(long foodId);
 
+  List<FoodTag> save(FoodTag foodTag);
+
+  List<FoodTag> findByTagType(Integer tagType);
+
+  /**
+   * blur search?
+   * @param tagName
+   * @return
+   */
+  List<FoodTag> findByTagName(String tagName);
+
 }
