@@ -12,6 +12,7 @@ public class Store {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long canteenId;
     private String storeName;
     private String intro;
     private String location;
@@ -21,6 +22,7 @@ public class Store {
 
     public Store(Long id, String storeName, String intro, String location) {
         this.id = id;
+        this.canteenId = canteenId;
         this.storeName = storeName;
         this.intro = intro;
         this.location = location;
@@ -32,6 +34,14 @@ public class Store {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getCanteenId() {
+        return canteenId;
+    }
+
+    public void setCanteenId(Long canteenId) {
+        this.canteenId = canteenId;
     }
 
     public String getStoreName() {
