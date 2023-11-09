@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `Store`;
 CREATE TABLE `Store`
 (
     `Id`        int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `canteenId` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '食堂ID',
+    `canteenId` int(10) unsigned NOT NULL COMMENT '食堂ID',
     `StoreName` varchar(32)  NOT NULL DEFAULT 'default' COMMENT '店铺名称',
     `Intro`     varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
     `Location`  varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
