@@ -4,32 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="add interfaces &#10;&#10;update FoodTag's data structure">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewDislikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewLikeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ReviewServiceImpl.java" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="add some functions&#10;&#10;update Review data struct">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/controller/CanteenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/controller/CanteenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/StoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewDislikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewDislikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewLikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewLikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ReviewService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/StoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/StoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/CanteenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/CanteenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/StoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/StoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Canteen.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Canteen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/FoodTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/FoodTag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Review.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/ReviewDislike.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/ReviewDislike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/ReviewLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/ReviewLike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Store.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/StoreDislike.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/StoreDislike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/StoreLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/StoreLike.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/UserFoodCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/UserFoodCollect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ReviewServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +111,7 @@
       <workItem from="1698834687853" duration="1524000" />
       <workItem from="1699015638112" duration="598000" />
       <workItem from="1699344716123" duration="17018000" />
-      <workItem from="1699443964517" duration="7955000" />
+      <workItem from="1699443964517" duration="10544000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -223,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699362850521</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add some functions&#10;&#10;update Review data struct">
+      <created>1699523740478</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699523740478</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +239,8 @@
     <MESSAGE value="enhance module dependencies" />
     <MESSAGE value="prepared for alpha pulse" />
     <MESSAGE value="add interfaces &#10;&#10;update FoodTag's data structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="add interfaces &#10;&#10;update FoodTag's data structure" />
+    <MESSAGE value="add some functions&#10;&#10;update Review data struct" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some functions&#10;&#10;update Review data struct" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
