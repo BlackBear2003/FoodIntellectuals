@@ -9,52 +9,53 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "FoodTag")
 public class FoodTag {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long foodId;
-    private String tagName;
-    private Integer tagType;
 
-    public FoodTag() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long foodId;
+  private String tagName;
+  private Integer tagType;
 
-    public FoodTag(Long id, Long foodId, String tagName, Integer tagType) {
-        this.id = id;
-        this.foodId = foodId;
-        this.tagName = tagName;
-        this.tagType = tagType;
-    }
+  public FoodTag() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public FoodTag(Long id, Long foodId, String tagName, Integer tagType) {
+    this.id = id;
+    this.foodId = foodId;
+    this.tagName = tagName;
+    this.tagType = tagType;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getFoodId() {
-        return foodId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setFoodId(Long foodId) {
-        this.foodId = foodId;
-    }
+  public Long getFoodId() {
+    return foodId;
+  }
 
-    public String getTagName() {
-        return tagName;
-    }
+  public void setFoodId(Long foodId) {
+    this.foodId = foodId;
+  }
 
-    public void setTagName(String tagName) {
-        this.tagName = tagName;
-    }
+  public String getTagName() {
+    return tagName;
+  }
 
-    public Integer getTagType() {
-        return tagType;
-    }
+  public void setTagName(String tagName) {
+    this.tagName = tagName;
+  }
 
-    public void setTagType(Integer tagType) {
-        this.tagType = tagType;
-    }
+  public Integer getTagType() {
+    return tagType;
+  }
+
+  public void setTagType(Integer tagType) {
+    this.tagType = tagType;
+  }
 }

@@ -9,52 +9,53 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Image")
 public class Image {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String url;
-    private String belongType;
-    private Long belongId;
 
-    public Image() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String url;
+  private String belongType;
+  private Long belongId;
 
-    public Image(Long id, String url, String belongType, Long belongId) {
-        this.id = id;
-        this.url = url;
-        this.belongType = belongType;
-        this.belongId = belongId;
-    }
+  public Image() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Image(Long id, String url, String belongType, Long belongId) {
+    this.id = id;
+    this.url = url;
+    this.belongType = belongType;
+    this.belongId = belongId;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getUrl() {
-        return url;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  public String getUrl() {
+    return url;
+  }
 
-    public String getBelongType() {
-        return belongType;
-    }
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
-    public void setBelongType(String belongType) {
-        this.belongType = belongType;
-    }
+  public String getBelongType() {
+    return belongType;
+  }
 
-    public Long getBelongId() {
-        return belongId;
-    }
+  public void setBelongType(String belongType) {
+    this.belongType = belongType;
+  }
 
-    public void setBelongId(Long belongId) {
-        this.belongId = belongId;
-    }
+  public Long getBelongId() {
+    return belongId;
+  }
+
+  public void setBelongId(Long belongId) {
+    this.belongId = belongId;
+  }
 }

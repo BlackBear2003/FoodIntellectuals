@@ -9,42 +9,43 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ReviewDislike")
 public class ReviewDislike {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long reviewId;
-    private Long userId;
 
-    public ReviewDislike() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long reviewId;
+  private Long userId;
 
-    public ReviewDislike(Long id, Long reviewId, Long userId) {
-        this.id = id;
-        this.reviewId = reviewId;
-        this.userId = userId;
-    }
+  public ReviewDislike() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public ReviewDislike(Long id, Long reviewId, Long userId) {
+    this.id = id;
+    this.reviewId = reviewId;
+    this.userId = userId;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getReviewId() {
-        return reviewId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setReviewId(Long reviewId) {
-        this.reviewId = reviewId;
-    }
+  public Long getReviewId() {
+    return reviewId;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public void setReviewId(Long reviewId) {
+    this.reviewId = reviewId;
+  }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+  public Long getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
 }

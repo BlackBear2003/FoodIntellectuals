@@ -6,9 +6,9 @@ import host.luke.FoodIntellectuals.common.entity.Canteen;
 import java.util.List;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class CanteenServiceImpl implements CanteenService {
 
   private final CanteenRepository canteenRepository;

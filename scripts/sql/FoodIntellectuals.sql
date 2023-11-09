@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `Store`;
 CREATE TABLE `Store`
 (
     `Id`        int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `canteenId` int(10) unsigned NOT NULL COMMENT '食堂ID',
+    `CanteenId` int(10) unsigned NOT NULL COMMENT '食堂ID',
     `StoreName` varchar(32)  NOT NULL DEFAULT 'default' COMMENT '店铺名称',
     `Intro`     varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
     `Location`  varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
@@ -95,6 +95,7 @@ CREATE TABLE `Review`
     `FoodScore`     tinyint unsigned NOT NULL DEFAULT 5 COMMENT '对菜品评分（总评）',
     `WaitTimeScore` tinyint unsigned NOT NULL DEFAULT 5 COMMENT '菜品等待时间评分',
     `FlavorScore`   tinyint unsigned NOT NULL DEFAULT 5 COMMENT '菜品口味评分',
+    `ReviewTime`    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '评分时间',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='点评表';
 

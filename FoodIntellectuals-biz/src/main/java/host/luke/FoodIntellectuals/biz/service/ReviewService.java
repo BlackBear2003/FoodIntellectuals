@@ -14,4 +14,8 @@ public interface ReviewService {
   List<Review> findByUserId(long userId, int page, int size);
 
   Review findByReviewId(long reviewId);
+
+  long countLikeByReviewId(long reviewId);
+
+  long countDislikeByReviewId(long reviewId);
 }

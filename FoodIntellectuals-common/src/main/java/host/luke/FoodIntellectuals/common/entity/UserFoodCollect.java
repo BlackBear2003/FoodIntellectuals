@@ -9,42 +9,43 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "UserFoodCollect")
 public class UserFoodCollect {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long userId;
-    private Long foodId;
 
-    public UserFoodCollect() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long userId;
+  private Long foodId;
 
-    public UserFoodCollect(Long id, Long userId, Long foodId) {
-        this.id = id;
-        this.userId = userId;
-        this.foodId = foodId;
-    }
+  public UserFoodCollect() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public UserFoodCollect(Long id, Long userId, Long foodId) {
+    this.id = id;
+    this.userId = userId;
+    this.foodId = foodId;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+  public Long getUserId() {
+    return userId;
+  }
 
-    public Long getFoodId() {
-        return foodId;
-    }
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
 
-    public void setFoodId(Long foodId) {
-        this.foodId = foodId;
-    }
+  public Long getFoodId() {
+    return foodId;
+  }
+
+  public void setFoodId(Long foodId) {
+    this.foodId = foodId;
+  }
 }
