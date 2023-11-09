@@ -9,62 +9,63 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Food")
 public class Food {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long storeId;
-    private String foodName;
-    private Double price;
-    private String intro;
 
-    public Food() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long storeId;
+  private String foodName;
+  private Double price;
+  private String intro;
 
-    public Food(Long id, Long storeId, String foodName, Double price, String intro) {
-        this.id = id;
-        this.storeId = storeId;
-        this.foodName = foodName;
-        this.price = price;
-        this.intro = intro;
-    }
+  public Food() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Food(Long id, Long storeId, String foodName, Double price, String intro) {
+    this.id = id;
+    this.storeId = storeId;
+    this.foodName = foodName;
+    this.price = price;
+    this.intro = intro;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getStoreId() {
-        return storeId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setStoreId(Long storeId) {
-        this.storeId = storeId;
-    }
+  public Long getStoreId() {
+    return storeId;
+  }
 
-    public String getFoodName() {
-        return foodName;
-    }
+  public void setStoreId(Long storeId) {
+    this.storeId = storeId;
+  }
 
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
-    }
+  public String getFoodName() {
+    return foodName;
+  }
 
-    public Double getPrice() {
-        return price;
-    }
+  public void setFoodName(String foodName) {
+    this.foodName = foodName;
+  }
 
-    public void setPrice(Double price) {
-        this.price = price;
-    }
+  public Double getPrice() {
+    return price;
+  }
 
-    public String getIntro() {
-        return intro;
-    }
+  public void setPrice(Double price) {
+    this.price = price;
+  }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
-    }
+  public String getIntro() {
+    return intro;
+  }
+
+  public void setIntro(String intro) {
+    this.intro = intro;
+  }
 }

@@ -9,42 +9,43 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Canteen")
 public class Canteen {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String canteenName;
-    private String intro;
 
-    public Canteen() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String canteenName;
+  private String intro;
 
-    public Canteen(long id, String canteenName, String intro) {
-        this.id = id;
-        this.canteenName = canteenName;
-        this.intro = intro;
-    }
+  public Canteen() {
+  }
 
-    public long getId() {
-        return id;
-    }
+  public Canteen(long id, String canteenName, String intro) {
+    this.id = id;
+    this.canteenName = canteenName;
+    this.intro = intro;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public long getId() {
+    return id;
+  }
 
-    public String getCanteenName() {
-        return canteenName;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setCanteenName(String canteenName) {
-        this.canteenName = canteenName;
-    }
+  public String getCanteenName() {
+    return canteenName;
+  }
 
-    public String getIntro() {
-        return intro;
-    }
+  public void setCanteenName(String canteenName) {
+    this.canteenName = canteenName;
+  }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
-    }
+  public String getIntro() {
+    return intro;
+  }
+
+  public void setIntro(String intro) {
+    this.intro = intro;
+  }
 }

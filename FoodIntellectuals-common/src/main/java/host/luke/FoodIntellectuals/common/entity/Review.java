@@ -1,5 +1,6 @@
 package host.luke.FoodIntellectuals.common.entity;
 
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,112 +10,124 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Review")
 public class Review {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long storeId;
-    private Long foodId;
-    private Long userId;
-    private String content;
-    private Integer storeScore;
-    private Integer attitudeScore;
-    private Integer foodScore;
-    private Integer waitTimeScore;
-    private Integer flavorScore;
 
-    public Review() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long storeId;
+  private Long foodId;
+  private Long userId;
+  private String content;
+  private Integer storeScore;
+  private Integer attitudeScore;
+  private Integer foodScore;
+  private Integer waitTimeScore;
+  private Integer flavorScore;
+  private Date reviewTime;
 
-    public Review(Long id, Long storeId, Long foodId, Long userId, String content, Integer storeScore, Integer attitudeScore, Integer foodScore, Integer waitTimeScore, Integer flavorScore) {
-        this.id = id;
-        this.storeId = storeId;
-        this.foodId = foodId;
-        this.userId = userId;
-        this.content = content;
-        this.storeScore = storeScore;
-        this.attitudeScore = attitudeScore;
-        this.foodScore = foodScore;
-        this.waitTimeScore = waitTimeScore;
-        this.flavorScore = flavorScore;
-    }
+  public Review() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Review(Long id, Long storeId, Long foodId, Long userId, String content, Integer storeScore,
+      Integer attitudeScore, Integer foodScore, Integer waitTimeScore, Integer flavorScore) {
+    this.id = id;
+    this.storeId = storeId;
+    this.foodId = foodId;
+    this.userId = userId;
+    this.content = content;
+    this.storeScore = storeScore;
+    this.attitudeScore = attitudeScore;
+    this.foodScore = foodScore;
+    this.waitTimeScore = waitTimeScore;
+    this.flavorScore = flavorScore;
+    this.reviewTime = new Date();
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getStoreId() {
-        return storeId;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setStoreId(Long storeId) {
-        this.storeId = storeId;
-    }
+  public Long getStoreId() {
+    return storeId;
+  }
 
-    public Long getFoodId() {
-        return foodId;
-    }
+  public void setStoreId(Long storeId) {
+    this.storeId = storeId;
+  }
 
-    public void setFoodId(Long foodId) {
-        this.foodId = foodId;
-    }
+  public Long getFoodId() {
+    return foodId;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public void setFoodId(Long foodId) {
+    this.foodId = foodId;
+  }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+  public Long getUserId() {
+    return userId;
+  }
 
-    public String getContent() {
-        return content;
-    }
+  public void setUserId(Long userId) {
+    this.userId = userId;
+  }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+  public String getContent() {
+    return content;
+  }
 
-    public Integer getStoreScore() {
-        return storeScore;
-    }
+  public void setContent(String content) {
+    this.content = content;
+  }
 
-    public void setStoreScore(Integer storeScore) {
-        this.storeScore = storeScore;
-    }
+  public Integer getStoreScore() {
+    return storeScore;
+  }
 
-    public Integer getAttitudeScore() {
-        return attitudeScore;
-    }
+  public void setStoreScore(Integer storeScore) {
+    this.storeScore = storeScore;
+  }
 
-    public void setAttitudeScore(Integer attitudeScore) {
-        this.attitudeScore = attitudeScore;
-    }
+  public Integer getAttitudeScore() {
+    return attitudeScore;
+  }
 
-    public Integer getFoodScore() {
-        return foodScore;
-    }
+  public void setAttitudeScore(Integer attitudeScore) {
+    this.attitudeScore = attitudeScore;
+  }
 
-    public void setFoodScore(Integer foodScore) {
-        this.foodScore = foodScore;
-    }
+  public Integer getFoodScore() {
+    return foodScore;
+  }
 
-    public Integer getWaitTimeScore() {
-        return waitTimeScore;
-    }
+  public void setFoodScore(Integer foodScore) {
+    this.foodScore = foodScore;
+  }
 
-    public void setWaitTimeScore(Integer waitTimeScore) {
-        this.waitTimeScore = waitTimeScore;
-    }
+  public Integer getWaitTimeScore() {
+    return waitTimeScore;
+  }
 
-    public Integer getFlavorScore() {
-        return flavorScore;
-    }
+  public void setWaitTimeScore(Integer waitTimeScore) {
+    this.waitTimeScore = waitTimeScore;
+  }
 
-    public void setFlavorScore(Integer flavorScore) {
-        this.flavorScore = flavorScore;
-    }
+  public Integer getFlavorScore() {
+    return flavorScore;
+  }
+
+  public void setFlavorScore(Integer flavorScore) {
+    this.flavorScore = flavorScore;
+  }
+
+  public Date getReviewTime() {
+    return reviewTime;
+  }
+
+  public void setReviewTime(Date reviewTime) {
+    this.reviewTime = reviewTime;
+  }
 }

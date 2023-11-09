@@ -9,30 +9,31 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "StoreDislike")
 public class StoreDislike {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long storeId;
-    private Long userId;
 
-    public StoreDislike() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long storeId;
+  private Long userId;
 
-    public StoreDislike(Long id, Long storeId, Long userId) {
-        this.id = id;
-        this.storeId = storeId;
-        this.userId = userId;
-    }
+  public StoreDislike() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public StoreDislike(Long id, Long storeId, Long userId) {
+    this.id = id;
+    this.storeId = storeId;
+    this.userId = userId;
+  }
 
-    public Long getStoreId() {
-        return storeId;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public Long getUserId() {
-        return userId;
-    }
+  public Long getStoreId() {
+    return storeId;
+  }
+
+  public Long getUserId() {
+    return userId;
+  }
 }

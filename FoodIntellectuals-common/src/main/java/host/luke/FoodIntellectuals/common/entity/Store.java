@@ -9,52 +9,63 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "Store")
 public class Store {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String storeName;
-    private String intro;
-    private String location;
 
-    public Store() {
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private Long canteenId;
+  private String storeName;
+  private String intro;
+  private String location;
 
-    public Store(Long id, String storeName, String intro, String location) {
-        this.id = id;
-        this.storeName = storeName;
-        this.intro = intro;
-        this.location = location;
-    }
+  public Store() {
+  }
 
-    public Long getId() {
-        return id;
-    }
+  public Store(Long id, Long canteenId, String storeName, String intro, String location) {
+    this.id = id;
+    this.canteenId = canteenId;
+    this.storeName = storeName;
+    this.intro = intro;
+    this.location = location;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public Long getId() {
+    return id;
+  }
 
-    public String getStoreName() {
-        return storeName;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
-    }
+  public Long getCanteenId() {
+    return canteenId;
+  }
 
-    public String getIntro() {
-        return intro;
-    }
+  public void setCanteenId(Long canteenId) {
+    this.canteenId = canteenId;
+  }
 
-    public void setIntro(String intro) {
-        this.intro = intro;
-    }
+  public String getStoreName() {
+    return storeName;
+  }
 
-    public String getLocation() {
-        return location;
-    }
+  public void setStoreName(String storeName) {
+    this.storeName = storeName;
+  }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
+  public String getIntro() {
+    return intro;
+  }
+
+  public void setIntro(String intro) {
+    this.intro = intro;
+  }
+
+  public String getLocation() {
+    return location;
+  }
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
 }

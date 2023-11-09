@@ -11,4 +11,7 @@ public interface StoreService {
 
   Store findByStoreId(long storeId);
 
+  long countLikeByStoreId(long storeId);
+
+  long countDislikeByStoreId(long storeId);
 }
