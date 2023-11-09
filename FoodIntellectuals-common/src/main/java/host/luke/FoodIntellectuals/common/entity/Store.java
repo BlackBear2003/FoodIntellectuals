@@ -36,11 +36,11 @@ public class Store {
         this.id = id;
     }
 
-    public Long getcanteenId() {
+    public Long getCanteenId() {
         return canteenId;
     }
 
-    public void setcanteenId(Long canteenId) {
+    public void setCanteenId(Long canteenId) {
         this.canteenId = canteenId;
     }
 
