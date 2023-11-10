@@ -32,4 +32,9 @@ public class FoodServiceImpl implements FoodService {
   public Food findByFoodId(long foodId) {
     return foodRepository.getById(foodId);
   }
+
+  @Override
+  public List<Food> searchFoodByTagId(long tagId, int page, int size) {
+    return null;
+  }
 }

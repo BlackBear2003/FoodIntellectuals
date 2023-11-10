@@ -8,4 +8,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface StoreRepository extends JpaRepository<Store, Long> {
 
   List<Store> findByCanteenId(long canteenId, Pageable pageable);
+
+  List<Store> searchStoresByStoreNameContainingIgnoreCase(String storeName, Pageable pageable);
+
+  List<Store> searchStoresByStoreNameContainingIgnoreCaseAndCanteenId(String storeName, long canteenId, Pageable pageable);
+
+  List<Long> findIdsByCanteenId(Long canteenId);
 }

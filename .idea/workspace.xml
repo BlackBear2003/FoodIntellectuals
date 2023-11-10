@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- add FoodTag interfaces">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/vo/ImageVO.java" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- finish some interfaces&#10;&#10;- fix zzz's bugs">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/SearchServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodTagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodTagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/StoreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/StoreRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ImageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ScoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/SearchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodTagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodTagServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +116,7 @@
       <workItem from="1699015638112" duration="598000" />
       <workItem from="1699344716123" duration="17018000" />
       <workItem from="1699443964517" duration="15506000" />
-      <workItem from="1699618919979" duration="2358000" />
+      <workItem from="1699618919979" duration="6381000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -228,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699536775604</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="- finish some interfaces&#10;&#10;- fix zzz's bugs">
+      <created>1699621849918</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1699621849918</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,7 +268,8 @@
     <MESSAGE value="add some functions&#10;&#10;update Review data struct" />
     <MESSAGE value="- finish basic Review-related service layer.&#10;&#10;- Add javadoc to ReviewService.java" />
     <MESSAGE value="- add FoodTag interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="- add FoodTag interfaces" />
+    <MESSAGE value="- finish some interfaces&#10;&#10;- fix zzz's bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="- finish some interfaces&#10;&#10;- fix zzz's bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

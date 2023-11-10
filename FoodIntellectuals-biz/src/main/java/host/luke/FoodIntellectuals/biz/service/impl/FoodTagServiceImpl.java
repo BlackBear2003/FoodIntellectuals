@@ -2,6 +2,7 @@ package host.luke.FoodIntellectuals.biz.service.impl;
 
 import host.luke.FoodIntellectuals.biz.repository.FoodTagRepository;
 import host.luke.FoodIntellectuals.biz.service.FoodTagService;
+import host.luke.FoodIntellectuals.common.entity.Food;
 import host.luke.FoodIntellectuals.common.entity.FoodTag;
 import java.util.List;
 
@@ -27,8 +28,4 @@ public class FoodTagServiceImpl implements FoodTagService {
     return foodTagRepository.findByTagType(tagType);
   }
 
-  @Override
-  public List<FoodTag> findByTagName(String tagName) {
-    return foodTagRepository.findByTagName(tagName);
-  }
 }
