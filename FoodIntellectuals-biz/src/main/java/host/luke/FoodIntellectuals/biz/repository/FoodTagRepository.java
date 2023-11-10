@@ -5,7 +5,10 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface FoodTagRepository extends JpaRepository<FoodTag, Long> {
+
   List<FoodTag> findByFoodId(long foodId);
+
   List<FoodTag> findByTagType(Integer tagType);
+
   List<FoodTag> findByTagName(String tagName);
 }

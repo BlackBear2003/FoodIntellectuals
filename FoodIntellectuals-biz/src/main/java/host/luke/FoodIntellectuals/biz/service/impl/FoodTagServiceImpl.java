@@ -18,9 +18,8 @@ public class FoodTagServiceImpl implements FoodTagService {
   }
 
   @Override
-  public List<FoodTag> save(FoodTag foodTag) {
-    foodTagRepository.save(foodTag);
-    return foodTagRepository.findAll();
+  public FoodTag save(FoodTag foodTag) {
+    return foodTagRepository.save(foodTag);
   }
 
   @Override
