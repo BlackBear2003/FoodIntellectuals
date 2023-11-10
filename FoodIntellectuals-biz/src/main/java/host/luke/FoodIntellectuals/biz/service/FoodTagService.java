@@ -7,7 +7,7 @@ public interface FoodTagService {
 
   List<FoodTag> findByFoodId(long foodId);
 
-  List<FoodTag> save(FoodTag foodTag);
+  FoodTag save(FoodTag foodTag);
 
   List<FoodTag> findByTagType(Integer tagType);
 
