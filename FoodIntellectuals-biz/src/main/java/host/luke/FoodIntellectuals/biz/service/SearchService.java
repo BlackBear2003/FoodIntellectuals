@@ -7,13 +7,16 @@ import java.util.List;
 
 public interface SearchService {
 
-  List<Store> searchStoreByNameInGlobal(String storeName);
+  List<Store> searchStoreByNameInGlobal(String storeName, int page, int size);
 
-  List<Store> searchStoreByNameInCanteen(String storeName, long canteenId);
+  List<Store> searchStoreByNameInCanteen(String storeName, long canteenId, int page, int size);
 
-  List<Food> searchFoodByNameInGlobal(String foodName);
+  List<Food> searchFoodByNameInGlobal(String foodName, int page, int size);
 
-  List<Food> searchFoodByNameInStore(String foodName, long storeId);
+  List<Food> searchFoodByNameInStore(String foodName, long storeId, int page, int size);
 
-  List<Food> searchFoodByTagId(FoodTag tagId);
+  List<Food> searchFoodByNameInCanteen(String foodName, long canteenId, int page, int size);
+
+  List<FoodTag> searchFoodTagByTagName(String tagName, int page, int size);
+
 }
