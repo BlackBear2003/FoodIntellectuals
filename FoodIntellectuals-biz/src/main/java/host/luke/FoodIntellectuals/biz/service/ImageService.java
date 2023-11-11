@@ -8,7 +8,7 @@ public interface ImageService {
 
   List<Image> findByBelongTypeAndId(String type, Long id);
 
-  Image save(ImageVO image);
+  Image save(ImageVO imageVO);
 
   /**
    * Delete images by belong type and id, might delete many.
