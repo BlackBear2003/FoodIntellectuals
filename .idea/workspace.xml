@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- finish ImageService">
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- design ScoreService interfaces">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ScoreServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/ScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -70,7 +72,7 @@
       <recent name="host.luke.FoodIntellectuals.biz" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.FoodIntellectualsBizApplication">
     <configuration name="FoodIntellectualsAuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="FoodIntellectuals-auth" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="host.luke.FoodIntellectuals.auth.FoodIntellectualsAuthApplication" />
@@ -84,8 +86,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodIntellectualsBizApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="FoodIntellectuals-biz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="host.luke.FoodIntellectuals.biz.FoodIntellectualsBizApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="host.luke.FoodIntellectuals.biz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.FoodIntellectualsBizApplication" />
         <item itemvalue="Spring Boot.FoodIntellectualsAuthApplication" />
       </list>
     </recent_temporary>
@@ -110,6 +126,7 @@
       <workItem from="1699344716123" duration="17018000" />
       <workItem from="1699443964517" duration="15506000" />
       <workItem from="1699618919979" duration="12293000" />
+      <workItem from="1699795967771" duration="1175000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -244,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699714088110</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="- design ScoreService interfaces">
+      <created>1699795998857</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1699795998857</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +302,8 @@
     <MESSAGE value="- finish some interfaces&#10;&#10;- fix zzz's bugs" />
     <MESSAGE value="- finish most part of SearchService" />
     <MESSAGE value="- finish ImageService" />
-    <option name="LAST_COMMIT_MESSAGE" value="- finish ImageService" />
+    <MESSAGE value="- design ScoreService interfaces" />
+    <option name="LAST_COMMIT_MESSAGE" value="- design ScoreService interfaces" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
