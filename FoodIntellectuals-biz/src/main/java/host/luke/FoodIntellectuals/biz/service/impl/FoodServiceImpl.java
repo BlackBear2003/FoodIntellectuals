@@ -30,7 +30,7 @@ public class FoodServiceImpl implements FoodService {
 
   @Override
   public Food findByFoodId(long foodId) {
-    return foodRepository.getById(foodId);
+    return foodRepository.findById(foodId).orElse(null);
   }
 
   @Override
