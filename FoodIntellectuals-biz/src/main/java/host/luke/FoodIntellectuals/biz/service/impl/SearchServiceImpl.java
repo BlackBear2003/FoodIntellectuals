@@ -36,7 +36,8 @@ public class SearchServiceImpl implements SearchService {
   public List<Store> searchStoreByNameInCanteen(String storeName, long canteenId, int page,
       int size) {
     Pageable pageable = PageRequest.of(page, size);
-    return storeRepository.searchStoresByStoreNameContainingIgnoreCaseAndCanteenId(storeName, canteenId, pageable);
+    return storeRepository.searchStoresByStoreNameContainingIgnoreCaseAndCanteenId(storeName,
+        canteenId, pageable);
   }
 
   @Override
@@ -48,14 +49,16 @@ public class SearchServiceImpl implements SearchService {
   @Override
   public List<Food> searchFoodByNameInStore(String foodName, long storeId, int page, int size) {
     Pageable pageable = PageRequest.of(page, size);
-    return foodRepository.searchFoodsByFoodNameContainingIgnoreCaseAndStoreId(foodName, storeId, pageable);
+    return foodRepository.searchFoodsByFoodNameContainingIgnoreCaseAndStoreId(foodName, storeId,
+        pageable);
   }
 
   @Override
   public List<Food> searchFoodByNameInCanteen(String foodName, long canteenId, int page, int size) {
     List<Long> storeIds = storeRepository.findIdsByCanteenId(canteenId);
     Pageable pageable = PageRequest.of(page, size);
-    return foodRepository.searchFoodsByFoodNameContainingIgnoreCaseAndStoreIdIn(foodName, storeIds, pageable);
+    return foodRepository.searchFoodsByFoodNameContainingIgnoreCaseAndStoreIdIn(foodName, storeIds,
+        pageable);
   }
 
   @Override
