@@ -20,39 +20,40 @@ public class SearchController {
     this.searchService = searchService;
   }
 
-  @GetMapping("/searchStoreByNameInGlobal")
+  @GetMapping("/store/name/global")
   public ResponseDto<List<Store>> searchStoreByNameInGlobal(String storeName, int page, int size) {
     return new ResponseDto<>(200, null,
         searchService.searchStoreByNameInGlobal(storeName, page, size));
   }
 
-  @GetMapping("/searchStoreByNameInCanteen")
+  @GetMapping("/store/name/canteen")
   public ResponseDto<List<Store>> searchStoreByNameInCanteen(String storeName, long canteenId,
       int page, int size) {
     return new ResponseDto<>(200, null,
         searchService.searchStoreByNameInCanteen(storeName, canteenId, page, size));
   }
 
-  @GetMapping("/searchFoodByNameInGlobal")
+  @GetMapping("/food/name/global")
   public ResponseDto<List<Food>> searchFoodByNameInGlobal(String foodName, int page, int size) {
     return new ResponseDto<>(200, null,
         searchService.searchFoodByNameInGlobal(foodName, page, size));
   }
 
-  @GetMapping("/searchFoodByNameInStore")
+  @GetMapping("/food/name/store")
   public ResponseDto<List<Food>> searchFoodByNameInStore(String foodName, long storeId, int page,
       int size) {
     return new ResponseDto<>(200, null,
         searchService.searchFoodByNameInStore(foodName, storeId, page, size));
   }
 
-  @GetMapping("/searchFoodByNameInCanteen")
+  @GetMapping("/food/name/canteen")
   public ResponseDto<List<Food>> searchFoodByNameInCanteen(String foodName, long canteenId,
       int page, int size) {
     return new ResponseDto<>(200, null,
         searchService.searchFoodByNameInCanteen(foodName, canteenId, page, size));
   }
 
+  @Deprecated
   @GetMapping("/searchFoodTagByTagName")
   public ResponseDto<List<FoodTag>> searchFoodTagByTagName(String tagName, int page, int size) {
     return new ResponseDto<>(200, null, searchService.searchFoodTagByTagName(tagName, page, size));

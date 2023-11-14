@@ -24,5 +24,4 @@ public class CanteenController {
     List<Canteen> canteenList = canteenService.findAll(page, size);
     return new ResponseDto<>(200, null, canteenList);
   }
-
 }

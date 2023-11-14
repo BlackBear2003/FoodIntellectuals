@@ -18,27 +18,27 @@ public class StoreController {
     this.storeService = storeService;
   }
 
-  @GetMapping("/findAll")
+  @GetMapping("/")
   public ResponseDto<List<Store>> findAll(int page, int size) {
     return new ResponseDto<>(200, null, storeService.findAll(page, size));
   }
 
-  @GetMapping("/findByCanteenId")
+  @GetMapping("/canteenId")
   public ResponseDto<List<Store>> findByCanteenId(long canteenId, int page, int size) {
     return new ResponseDto<>(200, null, storeService.findByCanteenId(canteenId, page, size));
   }
 
-  @GetMapping("/findByStoreId")
+  @GetMapping("/storeId")
   public ResponseDto<Store> findByStoreId(long storeId) {
     return new ResponseDto<>(200, null, storeService.findByStoreId(storeId));
   }
 
-  @GetMapping("/countLikeByStoreId")
+  @GetMapping("/like")
   public ResponseDto<Long> countLikeByStoreId(long storeId) {
     return new ResponseDto<>(200, null, storeService.countLikeByStoreId(storeId));
   }
 
-  @GetMapping("/countDislikeByStoreId")
+  @GetMapping("/dislike")
   public ResponseDto<Long> countDislikeByStoreId(long storeId) {
     return new ResponseDto<>(200, null, storeService.countDislikeByStoreId(storeId));
   }

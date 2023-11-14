@@ -17,14 +17,14 @@ public class SpringFoxConfig {
   public Docket createApi() {
     return new Docket(DocumentationType.SWAGGER_2)
         .select()
-        .apis(RequestHandlerSelectors.basePackage("host.luke.FoodIntellectuals.auth.controller")) // 指定扫描的包
+        .apis(RequestHandlerSelectors.basePackage("host.luke.FoodIntellectuals.biz.controller")) // 指定扫描的包
         .build()
         .apiInfo(apiInfo());
   }
 
   private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
-        .title("福大知食分子 后台")
+        .title("福大知食分子 业务模块后台")
         .version("1.0")
         .license("我说的都对.License")
         .build();
