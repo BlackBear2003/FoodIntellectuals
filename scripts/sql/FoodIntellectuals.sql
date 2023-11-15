@@ -75,10 +75,19 @@ CREATE TABLE `FoodTag`
 (
     `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
     `FoodId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
-    `TagType`  tinyint unsigned NOT NULL DEFAULT 0 COMMENT 'Tag类型，0代表种类tag 1代表口味tag',
+    `TagId`   int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'tag ID',
+    PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品Tag关联表';
+
+
+DROP TABLE IF EXISTS `Tag`;
+CREATE TABLE `Tag`
+(
+    `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `TagType` tinyint unsigned NOT NULL DEFAULT 0 COMMENT 'Tag类型，0代表种类tag 1代表口味tag',
     `TagName` varchar(32) NOT NULL DEFAULT 'default' COMMENT 'Tag名称',
     PRIMARY KEY (`Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品Tag表';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Tag表';
 
 
 DROP TABLE IF EXISTS `Review`;
@@ -95,7 +104,7 @@ CREATE TABLE `Review`
     `FoodScore`     tinyint unsigned NOT NULL DEFAULT 5 COMMENT '对菜品评分（总评）',
     `WaitTimeScore` tinyint unsigned NOT NULL DEFAULT 5 COMMENT '菜品等待时间评分',
     `FlavorScore`   tinyint unsigned NOT NULL DEFAULT 5 COMMENT '菜品口味评分',
-    `ReviewTime`    TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '评分时间',
+    `ReviewTime`    TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '评分时间',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='点评表';
 

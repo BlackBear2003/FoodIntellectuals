@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- design ScoreService interfaces">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ScoreServiceImpl.java" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- set restful api&#10;&#10;- update sth...">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/TagRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/TagService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/Tag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/ReviewRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodTagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodTagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/FoodTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/entity/FoodTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -126,7 +130,9 @@
       <workItem from="1699344716123" duration="17018000" />
       <workItem from="1699443964517" duration="15506000" />
       <workItem from="1699618919979" duration="12293000" />
-      <workItem from="1699795967771" duration="1175000" />
+      <workItem from="1699795967771" duration="4788000" />
+      <workItem from="1699940161842" duration="2239000" />
+      <workItem from="1699959567415" duration="11067000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -268,7 +274,21 @@
       <option name="project" value="LOCAL" />
       <updated>1699795998857</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="- finish ScoreService">
+      <created>1699797158187</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699797158187</updated>
+    </task>
+    <task id="LOCAL-00022" summary="- set restful api&#10;&#10;- update sth...">
+      <created>1699975544148</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699975544148</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +323,9 @@
     <MESSAGE value="- finish most part of SearchService" />
     <MESSAGE value="- finish ImageService" />
     <MESSAGE value="- design ScoreService interfaces" />
-    <option name="LAST_COMMIT_MESSAGE" value="- design ScoreService interfaces" />
+    <MESSAGE value="- finish ScoreService" />
+    <MESSAGE value="- set restful api&#10;&#10;- update sth..." />
+    <option name="LAST_COMMIT_MESSAGE" value="- set restful api&#10;&#10;- update sth..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

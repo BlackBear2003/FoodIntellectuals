@@ -4,6 +4,8 @@ import host.luke.FoodIntellectuals.common.entity.Store;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface StoreRepository extends JpaRepository<Store, Long> {
 
@@ -13,5 +15,7 @@ public interface StoreRepository extends JpaRepository<Store, Long> {
 
   List<Store> searchStoresByStoreNameContainingIgnoreCaseAndCanteenId(String storeName, long canteenId, Pageable pageable);
 
-  List<Long> findIdsByCanteenId(Long canteenId);
+  @Query("SELECT s.id FROM Store s WHERE s.canteenId = :canteenId")
+  List<Long> findIdsByCanteenId(@Param("canteenId") Long canteenId);
+
 }

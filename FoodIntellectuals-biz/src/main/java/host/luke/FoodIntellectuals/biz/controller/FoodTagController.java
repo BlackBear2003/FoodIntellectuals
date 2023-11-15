@@ -19,7 +19,7 @@ public class FoodTagController {
     this.foodTagService = foodTagService;
   }
 
-  @GetMapping("/findByFoodId")
+  @GetMapping("/foodId")
   public ResponseDto<List<FoodTag>> findByFoodId(long foodId) {
     List<FoodTag> foodTags = foodTagService.findByFoodId(foodId);
     return new ResponseDto<>(200, null, foodTags);
@@ -31,7 +31,7 @@ public class FoodTagController {
     return new ResponseDto<>(200, null, newFoodTag);
   }
 
-  @GetMapping("/findByTagType")
+  @GetMapping("/tagType")
   public ResponseDto<List<FoodTag>> findByTagType(Integer tagType) {
     List<FoodTag> foodTags = foodTagService.findByTagType(tagType);
     return new ResponseDto<>(200, null, foodTags);

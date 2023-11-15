@@ -14,17 +14,10 @@ public class FoodTag {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
   private Long foodId;
-  private String tagName;
-  private Integer tagType;
+  private Long tagId;
+
 
   public FoodTag() {
-  }
-
-  public FoodTag(Long id, Long foodId, String tagName, Integer tagType) {
-    this.id = id;
-    this.foodId = foodId;
-    this.tagName = tagName;
-    this.tagType = tagType;
   }
 
   public Long getId() {
@@ -43,19 +36,11 @@ public class FoodTag {
     this.foodId = foodId;
   }
 
-  public String getTagName() {
-    return tagName;
+  public Long getTagId() {
+    return tagId;
   }
 
-  public void setTagName(String tagName) {
-    this.tagName = tagName;
-  }
-
-  public Integer getTagType() {
-    return tagType;
-  }
-
-  public void setTagType(Integer tagType) {
-    this.tagType = tagType;
+  public void setTagId(Long tagId) {
+    this.tagId = tagId;
   }
 }
