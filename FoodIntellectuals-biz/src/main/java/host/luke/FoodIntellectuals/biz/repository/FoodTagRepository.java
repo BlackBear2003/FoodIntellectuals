@@ -9,7 +9,7 @@ public interface FoodTagRepository extends JpaRepository<FoodTag, Long> {
 
   List<FoodTag> findByFoodId(long foodId);
 
-  List<FoodTag> findByTagType(Integer tagType);
-
-  List<FoodTag> searchFoodTagsByTagNameContainingIgnoreCase(String tagName, Pageable pageable);
+//  List<FoodTag> findByTagType(Integer tagType);
+//
+//  List<FoodTag> searchFoodTagsByTagNameContainingIgnoreCase(String tagName, Pageable pageable);
 }

@@ -11,6 +11,4 @@ public interface FoodService {
 
   Food findByFoodId(long foodId);
 
-  List<Food> searchFoodByTagId(long tagId, int page, int size);
-
 }

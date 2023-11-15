@@ -33,8 +33,4 @@ public class FoodServiceImpl implements FoodService {
     return foodRepository.findById(foodId).orElse(null);
   }
 
-  @Override
-  public List<Food> searchFoodByTagId(long tagId, int page, int size) {
-    return null;
-  }
 }
