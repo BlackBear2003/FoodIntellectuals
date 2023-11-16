@@ -7,10 +7,10 @@ public interface TagService {
 
   List<Tag> searchTagByTagName(String tagName);
 
-  List<Tag> findTagById(Long tagId);
+  Tag findTagById(Long tagId);
 
   Tag save(Tag tag);
 
-  List<Tag> findByType(String tagType);
+  List<Tag> findByType(Integer tagType);
 
 }
