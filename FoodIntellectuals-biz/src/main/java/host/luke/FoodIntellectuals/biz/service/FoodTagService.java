@@ -11,7 +11,7 @@ public interface FoodTagService {
 
   FoodTag save(FoodTag foodTag);
 
-  FoodTag saveByTagTypeAndName(Long foodId, String tagType, String tagName);
+  FoodTag saveByTagTypeAndName(Long foodId, Integer tagType, String tagName);
 
   List<Food> findFoodsByTagId(Long tagId, int page, int size);
 }
