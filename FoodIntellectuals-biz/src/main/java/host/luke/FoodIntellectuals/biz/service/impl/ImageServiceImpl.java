@@ -20,6 +20,11 @@ public class ImageServiceImpl implements ImageService {
   }
 
   @Override
+  public Image findById(Long imageId) {
+    return imageRepository.findById(imageId).orElse(null);
+  }
+
+  @Override
   public List<Image> findByBelongTypeAndId(String type, Long id) {
     return imageRepository.findImagesByBelongTypeAndBelongId(type, id);
   }
