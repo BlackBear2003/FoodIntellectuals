@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.service.FoodService;
+import host.luke.FoodIntellectuals.biz.service.FoodTagService;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
 import host.luke.FoodIntellectuals.common.entity.Food;
 import java.util.List;
@@ -14,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class FoodController {
 
   private final FoodService foodService;
+  private final FoodTagService foodTagService;
 
-  public FoodController(FoodService foodService) {
+  public FoodController(FoodService foodService, FoodTagService foodTagService) {
     this.foodService = foodService;
+    this.foodTagService = foodTagService;
   }
 
   @GetMapping("/")
@@ -36,5 +39,11 @@ public class FoodController {
   public ResponseDto<Food> findByFoodId(@RequestParam long foodId) {
     Food food = foodService.findByFoodId(foodId);
     return new ResponseDto<>(200, null, food);
+  }
+
+  @GetMapping("/tagId")
+  public ResponseDto<List<Food>> findByTagType(Long tagId, int page, int size) {
+    List<Food> foodTags = foodTagService.findFoodsByTagId(tagId, page, size);
+    return new ResponseDto<>(200, null, foodTags);
   }
 }
