@@ -17,7 +17,7 @@ public class Store {
   private String storeName;
   private String intro;
   private String location;
-  private Long tagId;
+  private String tag;
   private String imgUrl;
 
   public Store() {
@@ -63,12 +63,12 @@ public class Store {
     this.location = location;
   }
 
-  public Long getTagId() {
-    return tagId;
+  public String getTag() {
+    return tag;
   }
 
-  public void setTagId(Long tagId) {
-    this.tagId = tagId;
+  public void setTag(String tag) {
+    this.tag = tag;
   }
 
   public String getImgUrl() {

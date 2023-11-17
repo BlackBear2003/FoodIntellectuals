@@ -63,4 +63,9 @@ public class FoodTagServiceImpl implements FoodTagService {
         .collect(Collectors.toList());
     return foodRepository.findAllByIdIn(foodIdList, pageable).getContent();
   }
+
+  @Override
+  public List<Long> findFoodIdsHavingSpecificTagIds(List<Long> tagIds) {
+    return foodTagRepository.findDistinctFoodIdByTagIds(tagIds);
+  }
 }
