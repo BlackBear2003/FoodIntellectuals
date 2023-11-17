@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan(basePackageClasses = {FoodIntellectualsCommonConfig.class,
-
     FoodIntellectualsAuthApplication.class})
 public class FoodIntellectualsAuthApplication {
 

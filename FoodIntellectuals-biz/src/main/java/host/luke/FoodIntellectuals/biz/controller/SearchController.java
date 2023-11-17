@@ -1,7 +1,7 @@
 package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.service.SearchService;
-import host.luke.FoodIntellectuals.common.dto.ResponseDto;
+import host.luke.FoodIntellectuals.common.dto.ResponseDTO;
 import host.luke.FoodIntellectuals.common.entity.Food;
 import host.luke.FoodIntellectuals.common.entity.Store;
 import io.swagger.annotations.Api;
@@ -26,49 +26,49 @@ public class SearchController {
 
   @GetMapping("/store/name/global")
   @ApiOperation(value = "全局搜索店铺", notes = "根据店铺名称全局搜索店铺")
-  public ResponseDto<List<Store>> searchStoreByNameInGlobal(@RequestParam String storeName,
+  public ResponseDTO<List<Store>> searchStoreByNameInGlobal(@RequestParam String storeName,
       @RequestParam int page,
       @RequestParam int size) {
-    return new ResponseDto<>(200, null,
+    return new ResponseDTO<>(200, null,
         searchService.searchStoreByNameInGlobal(storeName, page, size));
   }
 
   @GetMapping("/store/name/canteen")
   @ApiOperation(value = "在食堂内搜索店铺", notes = "在指定食堂内根据店铺名称搜索店铺")
-  public ResponseDto<List<Store>> searchStoreByNameInCanteen(@RequestParam String storeName,
+  public ResponseDTO<List<Store>> searchStoreByNameInCanteen(@RequestParam String storeName,
       @RequestParam long canteenId,
       @RequestParam int page,
       @RequestParam int size) {
-    return new ResponseDto<>(200, null,
+    return new ResponseDTO<>(200, null,
         searchService.searchStoreByNameInCanteen(storeName, canteenId, page, size));
   }
 
   @GetMapping("/food/name/global")
   @ApiOperation(value = "全局搜索食品", notes = "根据食品名称全局搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInGlobal(@RequestParam String foodName,
+  public ResponseDTO<List<Food>> searchFoodByNameInGlobal(@RequestParam String foodName,
       @RequestParam int page,
       @RequestParam int size) {
-    return new ResponseDto<>(200, null,
+    return new ResponseDTO<>(200, null,
         searchService.searchFoodByNameInGlobal(foodName, page, size));
   }
 
   @GetMapping("/food/name/store")
   @ApiOperation(value = "在店铺内搜索食品", notes = "在指定店铺内根据食品名称搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInStore(@RequestParam String foodName,
+  public ResponseDTO<List<Food>> searchFoodByNameInStore(@RequestParam String foodName,
       @RequestParam long storeId,
       @RequestParam int page,
       @RequestParam int size) {
-    return new ResponseDto<>(200, null,
+    return new ResponseDTO<>(200, null,
         searchService.searchFoodByNameInStore(foodName, storeId, page, size));
   }
 
   @GetMapping("/food/name/canteen")
   @ApiOperation(value = "在食堂内搜索食品", notes = "在指定食堂内根据食品名称搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInCanteen(@RequestParam String foodName,
+  public ResponseDTO<List<Food>> searchFoodByNameInCanteen(@RequestParam String foodName,
       @RequestParam long canteenId,
       @RequestParam int page,
       @RequestParam int size) {
-    return new ResponseDto<>(200, null,
+    return new ResponseDTO<>(200, null,
         searchService.searchFoodByNameInCanteen(foodName, canteenId, page, size));
   }
 }

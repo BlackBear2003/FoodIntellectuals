@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.biz.repository;
 
 import host.luke.FoodIntellectuals.common.entity.Review;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Pageable;
@@ -31,5 +32,7 @@ public interface ReviewRepository extends JpaRepository<Review, Long> {
   @Query("SELECT AVG(r.flavorScore) FROM Review r WHERE r.foodId = :foodId")
   Optional<Double> calculateFoodFlavorScore(@Param("foodId") Long foodId);
 
+  List<Review> findReviewsByUserIdAndReviewTimeIsGreaterThanEqualAndReviewTimeLessThanEqual(
+      Long userId, Date startTime, Date endTime);
 
 }

@@ -1,18 +1,18 @@
 package host.luke.FoodIntellectuals.common.dto;
 
-public class ResponseDto<T> {
+public class ResponseDTO<T> {
 
   private int code;
   private String errorMessage;
   private T data;
 
-  public ResponseDto(int code, String errorMessage, T data) {
+  public ResponseDTO(int code, String errorMessage, T data) {
     this.code = code;
     this.errorMessage = errorMessage;
     this.data = data;
   }
 
-  public ResponseDto() {
+  public ResponseDTO() {
   }
 
   public int getCode() {

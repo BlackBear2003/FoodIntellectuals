@@ -6,7 +6,7 @@ import host.luke.FoodIntellectuals.auth.entity.vo.RegisterUserVO;
 import host.luke.FoodIntellectuals.auth.service.QiniuService;
 import host.luke.FoodIntellectuals.auth.service.UserService;
 import host.luke.FoodIntellectuals.auth.service.WechatService;
-import host.luke.FoodIntellectuals.common.dto.ResponseDto;
+import host.luke.FoodIntellectuals.common.dto.ResponseDTO;
 import java.util.Objects;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,32 +31,32 @@ public class UserController {
   }
 
   @GetMapping("/unionId/if-registered")
-  public ResponseDto<Boolean> isUnionIdRegistered(@RequestParam String unionId) {
+  public ResponseDTO<Boolean> isUnionIdRegistered(@RequestParam String unionId) {
     Boolean res = userService.isUnionIdRegistered(unionId);
-    return new ResponseDto<>(200, null, res);
+    return new ResponseDTO<>(200, null, res);
   }
 
   @GetMapping("/unionId")
-  public ResponseDto<GetUnionIdDTO> getUnionId(@RequestParam String jsCode) {
+  public ResponseDTO<GetUnionIdDTO> getUnionId(@RequestParam String jsCode) {
 
     GetUnionIdDTO res = wechatService.getUnionIdByJsCode(jsCode);
-    return new ResponseDto<>(200, null, res);
+    return new ResponseDTO<>(200, null, res);
   }
 
   @GetMapping("")
-  public ResponseDto<User> getUserByUnionId(@RequestParam String unionId) {
+  public ResponseDTO<User> getUserByUnionId(@RequestParam String unionId) {
     User user = userService.findByUnionId(unionId);
     if (Objects.isNull(user)) {
-      return new ResponseDto<>(404, "not such user", null);
+      return new ResponseDTO<>(404, "not such user", null);
     }
-    return new ResponseDto<>(200, null, user);
+    return new ResponseDTO<>(200, null, user);
   }
 
   @PostMapping("")
-  public ResponseDto<User> register(@RequestBody RegisterUserVO registerUserVO) {
+  public ResponseDTO<User> register(@RequestBody RegisterUserVO registerUserVO) {
 
     if (userService.isUnionIdRegistered(registerUserVO.getUnionId())) {
-      return new ResponseDto<>(403, "UnionId has been registered!", null);
+      return new ResponseDTO<>(403, "UnionId has been registered!", null);
     }
 
     User user = new User();
@@ -66,13 +66,13 @@ public class UserController {
     String avatarUrl = qiniuService.uploadImg(registerUserVO.getAvatarBase64());
 
     if (avatarUrl == null) {
-      return new ResponseDto<>(500, "failed to upload", null);
+      return new ResponseDTO<>(500, "failed to upload", null);
     }
 
     user.setAvatarUrl(avatarUrl);
 
     User saved = userService.save(user);
-    return new ResponseDto<>(200, null, saved);
+    return new ResponseDTO<>(200, null, saved);
   }
 
 }

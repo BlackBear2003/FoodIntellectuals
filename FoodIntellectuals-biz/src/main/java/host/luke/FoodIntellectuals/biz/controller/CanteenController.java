@@ -1,7 +1,7 @@
 package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.service.CanteenService;
-import host.luke.FoodIntellectuals.common.dto.ResponseDto;
+import host.luke.FoodIntellectuals.common.dto.ResponseDTO;
 import host.luke.FoodIntellectuals.common.entity.Canteen;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,8 +25,8 @@ public class CanteenController {
 
   @GetMapping("/")
   @ApiOperation(value = "获取所有食堂", notes = "分页获取所有食堂信息")
-  public ResponseDto<List<Canteen>> findAll(@RequestParam int page, @RequestParam int size) {
+  public ResponseDTO<List<Canteen>> findAll(@RequestParam int page, @RequestParam int size) {
     List<Canteen> canteenList = canteenService.findAll(page, size);
-    return new ResponseDto<>(200, null, canteenList);
+    return new ResponseDTO<>(200, null, canteenList);
   }
 }

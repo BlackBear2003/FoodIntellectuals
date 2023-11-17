@@ -7,6 +7,7 @@ import host.luke.FoodIntellectuals.biz.service.ReviewService;
 import host.luke.FoodIntellectuals.common.entity.Review;
 import host.luke.FoodIntellectuals.common.entity.ReviewDislike;
 import host.luke.FoodIntellectuals.common.entity.ReviewLike;
+import java.util.Date;
 import java.util.List;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -39,6 +40,12 @@ public class ReviewServiceImpl implements ReviewService {
   public List<Review> findByStoreId(long storeId, int page, int size) {
     Pageable pageable = pageAndSortByTime(page, size);
     return reviewRepository.findByStoreId(storeId, pageable);
+  }
+
+  @Override
+  public Review create(Review review) {
+    review.setReviewTime(new Date());
+    return reviewRepository.save(review);
   }
 
   @Override

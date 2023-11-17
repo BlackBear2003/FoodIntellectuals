@@ -22,8 +22,9 @@ public interface ReviewService {
    * @param size    the number of items per page.
    * @return a list of reviews from the specified store.
    */
-
   List<Review> findByStoreId(long storeId, int page, int size);
+
+  Review create(Review review);
 
   /**
    * Returns all reviews for a specific food item based on the page number and size.
@@ -33,7 +34,6 @@ public interface ReviewService {
    * @param size   the number of items per page.
    * @return a list of reviews for the specified food.
    */
-
   List<Review> findByFoodId(long foodId, int page, int size);
 
   /**
