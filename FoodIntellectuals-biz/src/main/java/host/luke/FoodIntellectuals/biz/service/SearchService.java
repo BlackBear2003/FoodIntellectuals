@@ -17,6 +17,4 @@ public interface SearchService {
 
   List<Food> searchFoodByNameInCanteen(String foodName, long canteenId, int page, int size);
 
-  List<FoodTag> searchFoodTagByTagName(String tagName, int page, int size);
-
 }

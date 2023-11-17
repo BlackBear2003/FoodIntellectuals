@@ -60,10 +60,4 @@ public class SearchServiceImpl implements SearchService {
     return foodRepository.searchFoodsByFoodNameContainingIgnoreCaseAndStoreIdIn(foodName, storeIds,
         pageable);
   }
-
-  @Override
-  public List<FoodTag> searchFoodTagByTagName(String tagName, int page, int size) {
-    Pageable pageable = PageRequest.of(page, size);
-    return foodTagRepository.searchFoodTagsByTagNameContainingIgnoreCase(tagName, pageable);
-  }
 }
