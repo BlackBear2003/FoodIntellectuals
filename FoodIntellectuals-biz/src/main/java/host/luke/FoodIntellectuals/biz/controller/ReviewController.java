@@ -26,6 +26,12 @@ public class ReviewController {
     return new ResponseDTO<>(200, null, reviewService.findAll(page, size));
   }
 
+  @PostMapping("/")
+  @ApiOperation(value = "创建一条评论")
+  public ResponseDTO<Review> create(@RequestBody Review review) {
+    return new ResponseDTO<>(200, null, reviewService.create(review));
+  }
+
   @GetMapping("/storeId")
   @ApiOperation(value = "根据店铺ID获取评论列表", notes = "分页获取指定店铺的评论列表")
   public ResponseDTO<List<Review>> findByStoreId(@RequestParam long storeId,
