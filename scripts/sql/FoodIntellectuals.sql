@@ -53,6 +53,8 @@ CREATE TABLE `Store`
     `StoreName` varchar(32)  NOT NULL DEFAULT 'default' COMMENT '店铺名称',
     `Intro`     varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
     `Location`  varchar(128) NOT NULL DEFAULT 'default' COMMENT '店铺介绍、位置',
+    `TagId`     int(10) unsigned NOT NULL COMMENT 'tag ID',
+    `ImgUrl`    varchar(256) NOT NULL DEFAULT 'default' COMMENT '图片URL',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='店铺表';
 

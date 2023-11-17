@@ -17,16 +17,10 @@ public class Store {
   private String storeName;
   private String intro;
   private String location;
+  private Long tagId;
+  private String imgUrl;
 
   public Store() {
-  }
-
-  public Store(Long id, Long canteenId, String storeName, String intro, String location) {
-    this.id = id;
-    this.canteenId = canteenId;
-    this.storeName = storeName;
-    this.intro = intro;
-    this.location = location;
   }
 
   public Long getId() {
@@ -67,5 +61,21 @@ public class Store {
 
   public void setLocation(String location) {
     this.location = location;
+  }
+
+  public Long getTagId() {
+    return tagId;
+  }
+
+  public void setTagId(Long tagId) {
+    this.tagId = tagId;
+  }
+
+  public String getImgUrl() {
+    return imgUrl;
+  }
+
+  public void setImgUrl(String imgUrl) {
+    this.imgUrl = imgUrl;
   }
 }
