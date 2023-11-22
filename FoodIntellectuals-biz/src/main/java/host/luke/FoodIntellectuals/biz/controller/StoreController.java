@@ -5,6 +5,7 @@ import host.luke.FoodIntellectuals.common.dto.ResponseDTO;
 import host.luke.FoodIntellectuals.common.entity.Store;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import java.util.Collections;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,10 +32,15 @@ public class StoreController {
 
   @GetMapping("/canteenId")
   @ApiOperation(value = "根据食堂ID获取店铺列表", notes = "分页获取指定食堂下的店铺列表")
-  public ResponseDTO<List<Store>> findByCanteenId(@RequestParam long canteenId,
+  public ResponseDTO<List<Store>> findByCanteenId(
+      @RequestParam long canteenId,
       @RequestParam int page,
-      @RequestParam int size) {
-    return new ResponseDTO<>(200, null, storeService.findByCanteenId(canteenId, page, size));
+      @RequestParam int size
+  ) {
+
+    List<Store> storeList = storeService.findByCanteenId(canteenId, page, size);
+    Collections.shuffle(storeList);
+    return new ResponseDTO<>(200, null, storeList);
   }
 
   @GetMapping("/storeId")

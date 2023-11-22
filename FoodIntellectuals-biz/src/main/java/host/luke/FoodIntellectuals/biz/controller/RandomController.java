@@ -4,6 +4,8 @@ import host.luke.FoodIntellectuals.biz.service.FoodService;
 import host.luke.FoodIntellectuals.biz.service.FoodTagService;
 import host.luke.FoodIntellectuals.common.dto.ResponseDTO;
 import host.luke.FoodIntellectuals.common.entity.Food;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.util.Collections;
 import java.util.List;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/random")
+@Api("随机菜品接口")
 public class RandomController {
 
   private final FoodTagService foodTagService;
@@ -24,11 +27,21 @@ public class RandomController {
   }
 
   @PostMapping("/food/filter-by-tagId")
+  @ApiOperation("通过传入的Tag ID List，随机获取菜品，如果全局搜索则传空的List，不要传id=0，没有效果")
   public ResponseDTO<Food> findRandomFoodFilterByTagId(@RequestBody List<Long> tagIds) {
-    List<Long> foodIds = foodTagService.findFoodIdsHavingSpecificTagIds(tagIds);
-    Collections.shuffle(foodIds);
-    Food food = foodService.findByFoodId(foodIds.get(0));
-    return new ResponseDTO<>(200, null, food);
+
+    Food random;
+    if (!tagIds.isEmpty()) {
+      List<Long> foodIds = foodTagService.findFoodIdsHavingSpecificTagIds(tagIds);
+      Collections.shuffle(foodIds);
+      random = foodService.findByFoodId(foodIds.get(0));
+    } else {
+      List<Food> all = foodService.findAll(0, 100);
+      int n = (int) (Math.random() * all.size());
+      random = all.get(n);
+    }
+
+    return new ResponseDTO<>(200, null, random);
   }
 
 }
