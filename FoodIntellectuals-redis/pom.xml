@@ -9,20 +9,16 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   <modelVersion>4.0.0</modelVersion>
+  <packaging>jar</packaging>
 
-  <artifactId>FoodIntellectuals-common</artifactId>
+  <artifactId>FoodIntellectuals-redis</artifactId>
   <version>${revision}</version>
 
   <dependencies>
-
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>cn.hutool</groupId>
-      <artifactId>hutool-all</artifactId>
+      <groupId>host.luke.FoodIntellectuals</groupId>
+      <artifactId>FoodIntellectuals-common</artifactId>
     </dependency>
   </dependencies>
+
 </project>
