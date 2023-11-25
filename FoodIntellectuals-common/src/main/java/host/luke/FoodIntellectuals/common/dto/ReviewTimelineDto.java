@@ -1,13 +1,12 @@
 package host.luke.FoodIntellectuals.common.dto;
 
-import host.luke.FoodIntellectuals.common.entity.Review;
 import java.util.Date;
 import java.util.List;
 
 public class ReviewTimelineDto {
 
   private Date date;
-  private List<Review> timeline;
+  private List<ReviewDto> timeline;
 
   public ReviewTimelineDto() {
   }
@@ -20,11 +19,11 @@ public class ReviewTimelineDto {
     this.date = date;
   }
 
-  public List<Review> getTimeline() {
+  public List<ReviewDto> getTimeline() {
     return timeline;
   }
 
-  public void setTimeline(List<Review> timeline) {
+  public void setTimeline(List<ReviewDto> timeline) {
     this.timeline = timeline;
   }
 }

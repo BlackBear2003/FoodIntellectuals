@@ -1,7 +1,9 @@
 package host.luke.FoodIntellectuals.biz.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import host.luke.FoodIntellectuals.biz.repository.ReviewRepository;
 import host.luke.FoodIntellectuals.biz.service.ReviewTimelineService;
+import host.luke.FoodIntellectuals.common.dto.ReviewDto;
 import host.luke.FoodIntellectuals.common.dto.ReviewTimelineDto;
 import host.luke.FoodIntellectuals.biz.entity.Review;
 import java.util.ArrayList;
@@ -29,8 +31,9 @@ public class ReviewTimelineServiceImpl implements ReviewTimelineService {
     for (int i = 0; i < 5; i++) {
       List<Review> reviewList = reviewRepository.findReviewsByUserIdAndReviewTimeIsGreaterThanEqualAndReviewTimeLessThanEqual(
           userId, start, end);
+      List<ReviewDto> reviewDtoList = BeanUtil.copyToList(reviewList, ReviewDto.class);
       ReviewTimelineDto reviewTimeline = new ReviewTimelineDto();
-      reviewTimeline.setTimeline(reviewList);
+      reviewTimeline.setTimeline(reviewDtoList);
       reviewTimeline.setDate(start);
       res.add(reviewTimeline);
       end = start;

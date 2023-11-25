@@ -24,7 +24,7 @@ public class SpringFoxConfig {
 
   private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
-        .title("福大知食分子 后台")
+        .title("福大知食分子 auth后台")
         .version("1.0")
         .license("我说的都对.License")
         .build();

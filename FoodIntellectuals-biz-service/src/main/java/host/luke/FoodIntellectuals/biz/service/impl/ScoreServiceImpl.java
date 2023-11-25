@@ -2,15 +2,18 @@ package host.luke.FoodIntellectuals.biz.service.impl;
 
 import host.luke.FoodIntellectuals.biz.repository.ReviewRepository;
 import host.luke.FoodIntellectuals.biz.service.ScoreService;
+import host.luke.FoodIntellectuals.redis.api.RedisQueryApi;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ScoreServiceImpl implements ScoreService {
 
   private final ReviewRepository reviewRepository;
+  private final RedisQueryApi redisQueryApi;
 
-  public ScoreServiceImpl(ReviewRepository reviewRepository) {
+  public ScoreServiceImpl(ReviewRepository reviewRepository, RedisQueryApi redisQueryApi) {
     this.reviewRepository = reviewRepository;
+    this.redisQueryApi = redisQueryApi;
   }
 
   @Override

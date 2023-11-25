@@ -18,6 +18,7 @@
     <module>FoodIntellectuals-auth-web</module>
     <module>FoodIntellectuals-biz-web</module>
     <module>FoodIntellectuals-redis</module>
+    <module>FoodIntellectuals-redis-springboot-starter</module>
   </modules>
 
   <properties>
@@ -62,6 +63,11 @@
         <artifactId>FoodIntellectuals-redis</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>host.luke.FoodIntellectuals</groupId>
+        <artifactId>FoodIntellectuals-redis-springboot-starter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
       <!--spring framework -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -91,6 +97,11 @@
         <artifactId>spring-boot-starter-test</artifactId>
         <version>${springboot.version}</version>
         <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-autoconfigure</artifactId>
+        <version>${springboot.version}</version>
       </dependency>
       <dependency>
         <groupId>org.springframework.boot</groupId>
