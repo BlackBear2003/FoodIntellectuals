@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.biz.service;
 
 import host.luke.FoodIntellectuals.biz.entity.Review;
+import host.luke.FoodIntellectuals.common.dto.ReviewDto;
 import java.util.List;
 
 public interface ReviewService {
@@ -12,7 +13,9 @@ public interface ReviewService {
    * @param size the number of items per page.
    * @return a list of reviews.
    */
-  List<Review> findAll(int page, int size);
+  List<ReviewDto> findAll(int page, int size);
+
+  ReviewDto findById(long id);
 
   /**
    * Returns all reviews from a specific store based on the page number and size.
@@ -22,9 +25,9 @@ public interface ReviewService {
    * @param size    the number of items per page.
    * @return a list of reviews from the specified store.
    */
-  List<Review> findByStoreId(long storeId, int page, int size);
+  List<ReviewDto> findByStoreId(long storeId, int page, int size);
 
-  Review create(Review review);
+  ReviewDto create(Review review);
 
   /**
    * Returns all reviews for a specific food item based on the page number and size.
@@ -34,7 +37,7 @@ public interface ReviewService {
    * @param size   the number of items per page.
    * @return a list of reviews for the specified food.
    */
-  List<Review> findByFoodId(long foodId, int page, int size);
+  List<ReviewDto> findByFoodId(long foodId, int page, int size);
 
   /**
    * Returns all reviews by a specific user based on the page number and size.
@@ -45,7 +48,7 @@ public interface ReviewService {
    * @return a list of reviews by the specified user.
    */
 
-  List<Review> findByUserId(long userId, int page, int size);
+  List<ReviewDto> findByUserId(long userId, int page, int size);
 
   /**
    * Returns a specific review based on the reviewId.
@@ -54,7 +57,7 @@ public interface ReviewService {
    * @return a review with the specified ID.
    */
 
-  Review findByReviewId(long reviewId);
+  ReviewDto findByReviewId(long reviewId);
 
   /**
    * Returns the count of likes for a specific review.

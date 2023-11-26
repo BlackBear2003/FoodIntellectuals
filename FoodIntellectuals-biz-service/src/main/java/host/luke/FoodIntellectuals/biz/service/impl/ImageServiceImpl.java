@@ -7,6 +7,7 @@ import host.luke.FoodIntellectuals.common.vo.ImageVO;
 import host.luke.FoodIntellectuals.oss.service.OssService;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,21 +22,21 @@ public class ImageServiceImpl implements ImageService {
   }
 
   @Override
-  public String findById(Long imageId) {
-    return imageRepository.findById(imageId).orElse(new Image()).getUrl();
+  public Image findById(Long imageId) {
+    return imageRepository.findById(imageId).orElse(new Image());
   }
 
   @Override
-  public List<String> findByBelongTypeAndId(String type, Long id) {
+  public List<Image> findByBelongTypeAndId(String type, Long id) {
     List<Image> imageList = imageRepository.findImagesByBelongTypeAndBelongId(
         type, id);
-    List<String> urlList = new ArrayList<>();
-    for (Image i:
-    imageList) {
-      String url = i.getUrl();
-      urlList.add(url);
-    }
-    return urlList;
+    return imageList;
+  }
+
+  @Override
+  public List<String> findUrlListByBelongTypeAndId(String type, Long id) {
+    return findByBelongTypeAndId(type, id)
+        .stream().map(Image::getUrl).collect(Collectors.toList());
   }
 
   @Override

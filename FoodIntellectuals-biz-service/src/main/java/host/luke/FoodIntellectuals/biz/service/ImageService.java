@@ -6,9 +6,11 @@ import java.util.List;
 
 public interface ImageService {
 
-  String findById(Long imageId);
+  Image findById(Long imageId);
 
-  List<String> findByBelongTypeAndId(String type, Long id);
+  List<Image> findByBelongTypeAndId(String type, Long id);
+
+  List<String> findUrlListByBelongTypeAndId(String type, Long id);
 
   Image save(ImageVO imageVO);
 

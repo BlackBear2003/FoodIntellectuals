@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface FoodRepository extends JpaRepository<Food, Long> {
 
@@ -19,5 +20,5 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
   List<Food> searchFoodsByFoodNameContainingIgnoreCaseAndStoreIdIn(String foodName,
       Collection<Long> storeId, Pageable pageable);
   @Query("SELECT f FROM Food f WHERE f.id IN :ids")
-  Page<Food> findAllByIdIn(List<Long> ids, Pageable pageable);
+  List<Food> findAllByIdIn(@Param("ids") List<Long> ids, Pageable pageable);
 }

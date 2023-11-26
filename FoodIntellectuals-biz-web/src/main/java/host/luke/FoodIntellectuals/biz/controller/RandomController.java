@@ -2,6 +2,7 @@ package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.service.FoodService;
 import host.luke.FoodIntellectuals.biz.service.FoodTagService;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
 import host.luke.FoodIntellectuals.biz.entity.Food;
 import io.swagger.annotations.Api;
@@ -28,15 +29,15 @@ public class RandomController {
 
   @PostMapping("/food/filter-by-tagId")
   @ApiOperation("通过传入的Tag ID List，随机获取菜品，如果全局搜索则传空的List，不要传id=0，没有效果")
-  public ResponseDto<Food> findRandomFoodFilterByTagId(@RequestBody List<Long> tagIds) {
+  public ResponseDto<FoodDto> findRandomFoodFilterByTagId(@RequestBody List<Long> tagIds) {
 
-    Food random;
+    FoodDto random;
     if (!tagIds.isEmpty()) {
       List<Long> foodIds = foodTagService.findFoodIdsHavingSpecificTagIds(tagIds);
       Collections.shuffle(foodIds);
       random = foodService.findByFoodId(foodIds.get(0));
     } else {
-      List<Food> all = foodService.findAll(0, 100);
+      List<FoodDto> all = foodService.findAll(0, 100);
       int n = (int) (Math.random() * all.size());
       random = all.get(n);
     }

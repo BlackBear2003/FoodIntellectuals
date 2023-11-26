@@ -33,8 +33,8 @@ public class ImageController {
   public ResponseDto<List<Image>> getImagesByBelongTypeAndId(
       @RequestParam String belongType,
       @RequestParam Long belongId) {
-    List<Image> images = imageService.findByBelongTypeAndId(belongType, belongId);
-    return new ResponseDto<>(200, null, images);
+    List<Image> imgList = imageService.findByBelongTypeAndId(belongType, belongId);
+    return new ResponseDto<>(200, null, imgList);
   }
 
   @PostMapping

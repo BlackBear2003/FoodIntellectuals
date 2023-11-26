@@ -9,7 +9,7 @@ public class FoodDto {
   private String foodName;
   private Double price;
   private String intro;
-  private List<String> images;
+  private List<String> imgUrlList;
 
   public Long getId() {
     return id;
@@ -51,11 +51,11 @@ public class FoodDto {
     this.intro = intro;
   }
 
-  public List<String> getImages() {
-    return images;
+  public List<String> getImgUrlList() {
+    return imgUrlList;
   }
 
-  public void setImages(List<String> images) {
-    this.images = images;
+  public void setImgUrlList(List<String> imgUrlList) {
+    this.imgUrlList = imgUrlList;
   }
 }

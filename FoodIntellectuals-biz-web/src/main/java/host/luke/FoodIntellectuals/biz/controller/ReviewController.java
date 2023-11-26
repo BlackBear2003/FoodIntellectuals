@@ -3,6 +3,7 @@ package host.luke.FoodIntellectuals.biz.controller;
 import host.luke.FoodIntellectuals.biz.service.ReviewService;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
 import host.luke.FoodIntellectuals.biz.entity.Review;
+import host.luke.FoodIntellectuals.common.dto.ReviewDto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
@@ -20,21 +21,27 @@ public class ReviewController {
     this.reviewService = reviewService;
   }
 
-  @GetMapping("/")
+  @GetMapping("/all")
   @ApiOperation(value = "获取所有评论", notes = "分页获取所有评论信息")
-  public ResponseDto<List<Review>> findAll(@RequestParam int page, @RequestParam int size) {
+  public ResponseDto<List<ReviewDto>> findAll(@RequestParam int page, @RequestParam int size) {
     return new ResponseDto<>(200, null, reviewService.findAll(page, size));
+  }
+
+  @GetMapping("/")
+  @ApiOperation(value = "根据Id获取评论信息", notes = "分页获取所有评论信息")
+  public ResponseDto<ReviewDto> findById(@RequestParam long id) {
+    return new ResponseDto<>(200, null, reviewService.findById(id));
   }
 
   @PostMapping("/")
   @ApiOperation(value = "创建一条评论")
-  public ResponseDto<Review> create(@RequestBody Review review) {
+  public ResponseDto<ReviewDto> create(@RequestBody Review review) {
     return new ResponseDto<>(200, null, reviewService.create(review));
   }
 
   @GetMapping("/storeId")
   @ApiOperation(value = "根据店铺ID获取评论列表", notes = "分页获取指定店铺的评论列表")
-  public ResponseDto<List<Review>> findByStoreId(@RequestParam long storeId,
+  public ResponseDto<List<ReviewDto>> findByStoreId(@RequestParam long storeId,
       @RequestParam int page,
       @RequestParam int size) {
     return new ResponseDto<>(200, null, reviewService.findByStoreId(storeId, page, size));
@@ -42,7 +49,7 @@ public class ReviewController {
 
   @GetMapping("/foodId")
   @ApiOperation(value = "根据食品ID获取评论列表", notes = "分页获取指定食品的评论列表")
-  public ResponseDto<List<Review>> findByFoodId(@RequestParam long foodId,
+  public ResponseDto<List<ReviewDto>> findByFoodId(@RequestParam long foodId,
       @RequestParam int page,
       @RequestParam int size) {
     return new ResponseDto<>(200, null, reviewService.findByFoodId(foodId, page, size));
@@ -50,7 +57,7 @@ public class ReviewController {
 
   @GetMapping("/userId")
   @ApiOperation(value = "根据用户ID获取评论列表", notes = "分页获取指定用户的评论列表")
-  public ResponseDto<List<Review>> findByUserId(@RequestParam long userId,
+  public ResponseDto<List<ReviewDto>> findByUserId(@RequestParam long userId,
       @RequestParam int page,
       @RequestParam int size) {
     return new ResponseDto<>(200, null, reviewService.findByUserId(userId, page, size));
@@ -58,7 +65,7 @@ public class ReviewController {
 
   @GetMapping("/reviewId")
   @ApiOperation(value = "根据评论ID获取评论信息", notes = "根据评论ID获取指定评论的详细信息")
-  public ResponseDto<Review> findByReviewId(@RequestParam long reviewId) {
+  public ResponseDto<ReviewDto> findByReviewId(@RequestParam long reviewId) {
     return new ResponseDto<>(200, null, reviewService.findByReviewId(reviewId));
   }
 

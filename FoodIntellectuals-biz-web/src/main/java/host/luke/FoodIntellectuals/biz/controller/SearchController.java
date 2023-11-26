@@ -1,6 +1,7 @@
 package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.service.SearchService;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
 import host.luke.FoodIntellectuals.biz.entity.Food;
 import host.luke.FoodIntellectuals.biz.entity.Store;
@@ -45,7 +46,7 @@ public class SearchController {
 
   @GetMapping("/food/name/global")
   @ApiOperation(value = "全局搜索食品", notes = "根据食品名称全局搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInGlobal(@RequestParam String foodName,
+  public ResponseDto<List<FoodDto>> searchFoodByNameInGlobal(@RequestParam String foodName,
       @RequestParam int page,
       @RequestParam int size) {
     return new ResponseDto<>(200, null,
@@ -54,7 +55,7 @@ public class SearchController {
 
   @GetMapping("/food/name/store")
   @ApiOperation(value = "在店铺内搜索食品", notes = "在指定店铺内根据食品名称搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInStore(@RequestParam String foodName,
+  public ResponseDto<List<FoodDto>> searchFoodByNameInStore(@RequestParam String foodName,
       @RequestParam long storeId,
       @RequestParam int page,
       @RequestParam int size) {
@@ -64,7 +65,7 @@ public class SearchController {
 
   @GetMapping("/food/name/canteen")
   @ApiOperation(value = "在食堂内搜索食品", notes = "在指定食堂内根据食品名称搜索食品")
-  public ResponseDto<List<Food>> searchFoodByNameInCanteen(@RequestParam String foodName,
+  public ResponseDto<List<FoodDto>> searchFoodByNameInCanteen(@RequestParam String foodName,
       @RequestParam long canteenId,
       @RequestParam int page,
       @RequestParam int size) {

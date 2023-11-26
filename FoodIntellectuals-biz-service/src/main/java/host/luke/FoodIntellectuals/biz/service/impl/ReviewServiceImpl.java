@@ -1,14 +1,18 @@
 package host.luke.FoodIntellectuals.biz.service.impl;
 
-import host.luke.FoodIntellectuals.biz.repository.ReviewDislikeRepository;
-import host.luke.FoodIntellectuals.biz.repository.ReviewLikeRepository;
-import host.luke.FoodIntellectuals.biz.repository.ReviewRepository;
-import host.luke.FoodIntellectuals.biz.service.ReviewService;
 import host.luke.FoodIntellectuals.biz.entity.Review;
 import host.luke.FoodIntellectuals.biz.entity.ReviewDislike;
 import host.luke.FoodIntellectuals.biz.entity.ReviewLike;
+import host.luke.FoodIntellectuals.biz.repository.ReviewDislikeRepository;
+import host.luke.FoodIntellectuals.biz.repository.ReviewLikeRepository;
+import host.luke.FoodIntellectuals.biz.repository.ReviewRepository;
+import host.luke.FoodIntellectuals.biz.service.ImageService;
+import host.luke.FoodIntellectuals.biz.service.ReviewService;
+import host.luke.FoodIntellectuals.biz.util.DtoUtil;
+import host.luke.FoodIntellectuals.common.dto.ReviewDto;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -22,47 +26,73 @@ public class ReviewServiceImpl implements ReviewService {
   private final ReviewRepository reviewRepository;
   private final ReviewLikeRepository reviewLikeRepository;
   private final ReviewDislikeRepository reviewDislikeRepository;
+  private final ImageService imageService;
 
   public ReviewServiceImpl(ReviewRepository reviewRepository,
-      ReviewLikeRepository reviewLikeRepository, ReviewDislikeRepository reviewDislikeRepository) {
+      ReviewLikeRepository reviewLikeRepository, ReviewDislikeRepository reviewDislikeRepository,
+      ImageService imageService) {
     this.reviewRepository = reviewRepository;
     this.reviewLikeRepository = reviewLikeRepository;
     this.reviewDislikeRepository = reviewDislikeRepository;
+    this.imageService = imageService;
   }
 
   @Override
-  public List<Review> findAll(int page, int size) {
+  public List<ReviewDto> findAll(int page, int size) {
     Pageable pageable = pageAndSortByTime(page, size);
-    return reviewRepository.findAll(pageable).getContent();
+    return reviewRepository.findAll(pageable).getContent().stream().map(
+            review -> DtoUtil.reviewToReviewDto(review,
+                imageService.findUrlListByBelongTypeAndId("Review", review.getId())))
+        .collect(Collectors.toList());
   }
 
   @Override
-  public List<Review> findByStoreId(long storeId, int page, int size) {
+  public ReviewDto findById(long id) {
+    Review review = reviewRepository.findById(id).orElse(new Review());
+    return DtoUtil.reviewToReviewDto(review, imageService.findUrlListByBelongTypeAndId("Review", review.getId()));
+  }
+
+  @Override
+  public List<ReviewDto> findByStoreId(long storeId, int page, int size) {
     Pageable pageable = pageAndSortByTime(page, size);
-    return reviewRepository.findByStoreId(storeId, pageable);
+    List<Review> reviewList = reviewRepository.findByStoreId(storeId, pageable);
+
+    return reviewList.stream().map(review -> DtoUtil.reviewToReviewDto(review,
+            imageService.findUrlListByBelongTypeAndId("Review", review.getId())))
+        .collect(Collectors.toList());
   }
 
   @Override
-  public Review create(Review review) {
+  public ReviewDto create(Review review) {
     review.setReviewTime(new Date());
-    return reviewRepository.save(review);
+    Review save = reviewRepository.save(review);
+    return DtoUtil.reviewToReviewDto(save,
+        imageService.findUrlListByBelongTypeAndId("Review", review.getId()));
   }
 
   @Override
-  public List<Review> findByFoodId(long foodId, int page, int size) {
+  public List<ReviewDto> findByFoodId(long foodId, int page, int size) {
     Pageable pageable = pageAndSortByTime(page, size);
-    return reviewRepository.findByFoodId(foodId, pageable);
+    List<Review> reviewList = reviewRepository.findByFoodId(foodId, pageable);
+    return reviewList.stream().map(review -> DtoUtil.reviewToReviewDto(review,
+            imageService.findUrlListByBelongTypeAndId("Review", review.getId())))
+        .collect(Collectors.toList());
   }
 
   @Override
-  public List<Review> findByUserId(long userId, int page, int size) {
+  public List<ReviewDto> findByUserId(long userId, int page, int size) {
     Pageable pageable = pageAndSortByTime(page, size);
-    return reviewRepository.findByUserId(userId, pageable);
+    List<Review> reviewList = reviewRepository.findByUserId(userId, pageable);
+    return reviewList.stream().map(review -> DtoUtil.reviewToReviewDto(review,
+            imageService.findUrlListByBelongTypeAndId("Review", review.getId())))
+        .collect(Collectors.toList());
   }
 
   @Override
-  public Review findByReviewId(long reviewId) {
-    return reviewRepository.getById(reviewId);
+  public ReviewDto findByReviewId(long reviewId) {
+    Review review = reviewRepository.findById(reviewId).orElse(new Review());
+    return DtoUtil.reviewToReviewDto(review,
+        imageService.findUrlListByBelongTypeAndId("Review", review.getId()));
   }
 
   @Override
