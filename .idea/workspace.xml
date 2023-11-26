@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- rebuild project structure">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/test/java/host/luke/FoodIntellectuals/biz/RedisApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/ReviewDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-redis-springboot-starter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-redis-springboot-starter/src/main/java/host/luke/FoodIntellectuals/redis/FoodIntellectualsRedisAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/impl/FoodIntellectualsRedisApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- finish redis auto configure module as a 'starter'">
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/FoodLike.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodLikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/FoodDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/FoodLikeDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-auth-web/src/main/java/host/luke/FoodIntellectuals/auth/config/SpringFoxConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-auth-web/src/main/java/host/luke/FoodIntellectuals/auth/config/SpringFoxConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ReviewTimelineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ReviewTimelineServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ScoreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ScoreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/test/java/host/luke/FoodIntellectuals/biz/TaskTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/test/java/host/luke/FoodIntellectuals/biz/TaskTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/ReviewTimelineDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/ReviewTimelineDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/FoodIntellectualsRedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/FoodIntellectualsRedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisQueryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisQueryApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisRecordApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisRecordApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/AsyncTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/AsyncTaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodTagService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/AsyncTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/AsyncTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodTagServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodTagServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/ImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/tasks/AddHotDotTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/tasks/AddHotDotTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/FoodIntellectualsBizApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/FoodIntellectualsBizApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +75,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "1.8",
     "last_directory_selection": "/Users/weizhile/Developer/FZU-SE/FoodIntellectuals/FoodIntellectuals-oss/src/main/java/host/luke/FoodIntellectuals",
@@ -88,7 +88,7 @@
     "project.structure.proportion": "0.116279066",
     "project.structure.side.proportion": "0.2646733",
     "settings.editor.selected.configurable": "reference.settings.project.maven.ignored.files",
-    "spring.configuration.checksum": "8d1f69a64bf0a8a6fa105654cdb9190e",
+    "spring.configuration.checksum": "cd3ce1016e6b3277612bf026f6e08bc6",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -226,7 +226,8 @@
       <workItem from="1700811526977" duration="5505000" />
       <workItem from="1700818665981" duration="1483000" />
       <workItem from="1700825462824" duration="4789000" />
-      <workItem from="1700837324891" duration="23002000" />
+      <workItem from="1700837324891" duration="23047000" />
+      <workItem from="1700966519868" duration="2924000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -452,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700818685660</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="- finish redis auto configure module as a 'starter'">
+      <created>1700934191405</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1700934191405</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +478,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish ssl;&#10;add a dev http port;" />
     <MESSAGE value="enhance register API" />
     <MESSAGE value="fix missing jpa annotation" />
     <MESSAGE value="enhance module dependencies" />
@@ -495,7 +502,8 @@
     <MESSAGE value="- finish random filter by tags" />
     <MESSAGE value="fixed:原神版本更新" />
     <MESSAGE value="- rebuild project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="- rebuild project structure" />
+    <MESSAGE value="- finish redis auto configure module as a 'starter'" />
+    <option name="LAST_COMMIT_MESSAGE" value="- finish redis auto configure module as a 'starter'" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

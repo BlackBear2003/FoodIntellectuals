@@ -133,6 +133,17 @@ CREATE TABLE `StoreLike`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='店铺点赞表';
 
 
+DROP TABLE IF EXISTS `FoodLike`;
+
+CREATE TABLE `FoodLike`
+(
+    `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `FoodId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '菜品ID',
+    `UserId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '用户ID',
+    PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品点赞表';
+
+
 DROP TABLE IF EXISTS `ReviewDislike`;
 
 CREATE TABLE `ReviewDislike`

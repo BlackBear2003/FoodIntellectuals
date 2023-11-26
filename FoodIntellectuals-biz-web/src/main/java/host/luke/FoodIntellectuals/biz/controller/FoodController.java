@@ -4,6 +4,7 @@ import host.luke.FoodIntellectuals.biz.service.AsyncTaskService;
 import host.luke.FoodIntellectuals.biz.service.FoodService;
 import host.luke.FoodIntellectuals.biz.service.FoodTagService;
 import host.luke.FoodIntellectuals.common.constant.HotValueConstant;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.common.dto.ResponseDto;
 import host.luke.FoodIntellectuals.biz.entity.Food;
 import io.swagger.annotations.Api;
@@ -32,33 +33,33 @@ public class FoodController {
 
   @GetMapping("/")
   @ApiOperation(value = "获取所有食品", notes = "分页获取所有食品信息")
-  public ResponseDto<List<Food>> findAll(@RequestParam int page, @RequestParam int size) {
-    List<Food> canteenList = foodService.findAll(page, size);
-    return new ResponseDto<>(200, null, canteenList);
+  public ResponseDto<List<FoodDto>> findAll(@RequestParam int page, @RequestParam int size) {
+    List<FoodDto> foodDtoList = foodService.findAll(page, size);
+    return new ResponseDto<>(200, null, foodDtoList);
   }
 
   @GetMapping("/storeId")
   @ApiOperation(value = "根据店铺ID获取食品列表", notes = "分页获取指定店铺的食品列表")
-  public ResponseDto<List<Food>> findByStoreId(@RequestParam long storeId, @RequestParam int page,
+  public ResponseDto<List<FoodDto>> findByStoreId(@RequestParam long storeId, @RequestParam int page,
                                                @RequestParam int size) {
-    List<Food> foodList = foodService.findByStoreId(storeId, page, size);
+    List<FoodDto> foodList = foodService.findByStoreId(storeId, page, size);
     asyncTaskService.addHotValue(foodList, HotValueConstant.checkValue);
     return new ResponseDto<>(200, null, foodList);
   }
 
   @GetMapping("/foodId")
   @ApiOperation(value = "根据食品ID获取食品详情", notes = "根据食品ID获取指定食品的详细信息")
-  public ResponseDto<Food> findByFoodId(@RequestParam long foodId) {
-    Food food = foodService.findByFoodId(foodId);
+  public ResponseDto<FoodDto> findByFoodId(@RequestParam long foodId) {
+    FoodDto food = foodService.findByFoodId(foodId);
     asyncTaskService.addHotValue(food, HotValueConstant.clickValue);
     return new ResponseDto<>(200, null, food);
   }
 
   @GetMapping("/tagId")
   @ApiOperation(value = "根据标签ID获取食品列表", notes = "分页获取指定标签下的食品列表")
-  public ResponseDto<List<Food>> findByTagType(Long tagId, int page, int size) {
-    List<Food> foodTags = foodTagService.findFoodsByTagId(tagId, page, size);
-    asyncTaskService.addHotValue(foodTags, HotValueConstant.checkValue);
-    return new ResponseDto<>(200, null, foodTags);
+  public ResponseDto<List<FoodDto>> findByTagType(Long tagId, int page, int size) {
+    List<FoodDto> foodDtoList = foodTagService.findFoodsByTagId(tagId, page, size);
+    asyncTaskService.addHotValue(foodDtoList, HotValueConstant.checkValue);
+    return new ResponseDto<>(200, null, foodDtoList);
   }
 }

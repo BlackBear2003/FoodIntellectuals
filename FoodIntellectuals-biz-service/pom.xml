@@ -22,6 +22,10 @@
       <groupId>host.luke.FoodIntellectuals</groupId>
       <artifactId>FoodIntellectuals-redis-springboot-starter</artifactId>
     </dependency>
+    <dependency>
+      <groupId>host.luke.FoodIntellectuals</groupId>
+      <artifactId>FoodIntellectuals-oss</artifactId>
+    </dependency>
 
     <dependency>
       <groupId>org.springframework.boot</groupId>

@@ -4,6 +4,7 @@ import host.luke.FoodIntellectuals.biz.repository.ImageRepository;
 import host.luke.FoodIntellectuals.biz.service.AsyncTaskService;
 import host.luke.FoodIntellectuals.biz.tasks.AddHotDotTask;
 import host.luke.FoodIntellectuals.biz.entity.Food;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -25,13 +26,13 @@ public class AsyncTaskServiceImpl implements AsyncTaskService {
   }
 
   @Override
-  public void addHotValue(Food food, Integer value) {
+  public void addHotValue(FoodDto food, Integer value) {
     AddHotDotTask addHotDotTask = new AddHotDotTask(food, value, rocketMQTemplate, imageRepository);
     executor.execute(addHotDotTask);
   }
 
   @Override
-  public void addHotValue(List<Food> foodList, Integer value) {
+  public void addHotValue(List<FoodDto> foodList, Integer value) {
 
   }
 }

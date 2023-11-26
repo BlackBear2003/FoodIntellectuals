@@ -3,6 +3,7 @@ package host.luke.FoodIntellectuals.biz.service;
 import host.luke.FoodIntellectuals.biz.entity.Food;
 import host.luke.FoodIntellectuals.biz.entity.FoodTag;
 import host.luke.FoodIntellectuals.biz.entity.Tag;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import java.util.List;
 
 public interface FoodTagService {
@@ -13,7 +14,7 @@ public interface FoodTagService {
 
   FoodTag saveByTagTypeAndName(Long foodId, Integer tagType, String tagName);
 
-  List<Food> findFoodsByTagId(Long tagId, int page, int size);
+  List<FoodDto> findFoodsByTagId(Long tagId, int page, int size);
 
   List<Long> findFoodIdsHavingSpecificTagIds(List<Long> tagIds);
 }

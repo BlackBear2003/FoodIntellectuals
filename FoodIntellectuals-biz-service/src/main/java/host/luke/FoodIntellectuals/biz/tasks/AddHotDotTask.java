@@ -1,9 +1,9 @@
 package host.luke.FoodIntellectuals.biz.tasks;
 
 import com.alibaba.fastjson.JSONObject;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.common.dto.FoodRankItem;
 import host.luke.FoodIntellectuals.biz.repository.ImageRepository;
-import host.luke.FoodIntellectuals.biz.entity.Food;
 import host.luke.FoodIntellectuals.biz.entity.Image;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 
@@ -16,7 +16,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class AddHotDotTask implements Runnable {
   private FoodRankItem foodRankItem;
   private Integer value;
-  private Food food;
+  private FoodDto food;
   private final RocketMQTemplate rocketmqTemplate;
   private final ImageRepository imageRepository;
   void handleData() {
@@ -27,7 +27,7 @@ public class AddHotDotTask implements Runnable {
     foodRankItem.setValue(value);
     foodRankItem.setFoodName(food.getFoodName());
   }
-  public AddHotDotTask(Food food, Integer value, RocketMQTemplate rocketmqTemplate, ImageRepository imageRepository) {
+  public AddHotDotTask(FoodDto food, Integer value, RocketMQTemplate rocketmqTemplate, ImageRepository imageRepository) {
     this.food = food;
     this.value = value;
     this.rocketmqTemplate = rocketmqTemplate;

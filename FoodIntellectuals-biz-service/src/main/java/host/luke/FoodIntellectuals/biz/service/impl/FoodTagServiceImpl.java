@@ -1,5 +1,6 @@
 package host.luke.FoodIntellectuals.biz.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
 import host.luke.FoodIntellectuals.biz.repository.FoodRepository;
 import host.luke.FoodIntellectuals.biz.repository.FoodTagRepository;
 import host.luke.FoodIntellectuals.biz.repository.TagRepository;
@@ -7,6 +8,10 @@ import host.luke.FoodIntellectuals.biz.service.FoodTagService;
 import host.luke.FoodIntellectuals.biz.entity.Food;
 import host.luke.FoodIntellectuals.biz.entity.FoodTag;
 import host.luke.FoodIntellectuals.biz.entity.Tag;
+import host.luke.FoodIntellectuals.biz.service.ImageService;
+import host.luke.FoodIntellectuals.common.constant.ImageType;
+import host.luke.FoodIntellectuals.common.dto.FoodDto;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -20,12 +25,14 @@ public class FoodTagServiceImpl implements FoodTagService {
   private final FoodTagRepository foodTagRepository;
   private final TagRepository tagRepository;
   private final FoodRepository foodRepository;
+  private final ImageService imageService;
 
   public FoodTagServiceImpl(FoodTagRepository foodTagRepository, TagRepository tagRepository,
-      FoodRepository foodRepository) {
+      FoodRepository foodRepository, ImageService imageService) {
     this.foodTagRepository = foodTagRepository;
     this.tagRepository = tagRepository;
     this.foodRepository = foodRepository;
+    this.imageService = imageService;
   }
 
   @Override
@@ -55,17 +62,36 @@ public class FoodTagServiceImpl implements FoodTagService {
   }
 
   @Override
-  public List<Food> findFoodsByTagId(Long tagId, int page, int size) {
+  public List<FoodDto> findFoodsByTagId(Long tagId, int page, int size) {
     Pageable pageable = PageRequest.of(page, size);
     List<FoodTag> foodTagList = foodTagRepository.findByTagId(tagId);
     List<Long> foodIdList = foodTagList.stream()
         .map(FoodTag::getFoodId)
         .collect(Collectors.toList());
-    return foodRepository.findAllByIdIn(foodIdList, pageable).getContent();
+    List<Food> foodList = foodRepository.findAllByIdIn(foodIdList, pageable).getContent();
+    return foodListToFoodDtoList(foodList);
   }
 
   @Override
   public List<Long> findFoodIdsHavingSpecificTagIds(List<Long> tagIds) {
     return foodTagRepository.findDistinctFoodIdByTagIds(tagIds);
+  }
+
+  private List<FoodDto> foodListToFoodDtoList(List<Food> foodList) {
+    List<FoodDto> dtoList = new ArrayList<>();
+    for (Food f : foodList) {
+      dtoList.add(foodToFoodDto(f));
+    }
+    return dtoList;
+  }
+
+  private FoodDto foodToFoodDto(Food food) {
+    List<String> images = imageService.findByBelongTypeAndId(ImageType.Food.name(),
+        food.getId());
+    FoodDto dto = new FoodDto();
+    BeanUtil.copyProperties(food, dto);
+    dto.setImages(images);
+
+    return dto;
   }
 }
