@@ -5,8 +5,10 @@ import host.luke.FoodIntellectuals.oss.FoodIntellectualsOssConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
+@EnableScheduling
 @ComponentScan(basePackageClasses = {FoodIntellectualsCommonConfig.class,
     FoodIntellectualsAuthApplication.class, FoodIntellectualsOssConfig.class})
 public class FoodIntellectualsAuthApplication {

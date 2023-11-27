@@ -18,6 +18,7 @@
       <groupId>host.luke.FoodIntellectuals</groupId>
       <artifactId>FoodIntellectuals-common</artifactId>
     </dependency>
+
     <dependency>
       <groupId>host.luke.FoodIntellectuals</groupId>
       <artifactId>FoodIntellectuals-redis-springboot-starter</artifactId>

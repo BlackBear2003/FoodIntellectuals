@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/food")
@@ -88,8 +90,9 @@ public class FoodController {
 
 
   @GetMapping("/collect/list")
-  @ApiOperation(value = "收藏菜品", notes = "点击爱心收藏菜品，再次点击取消收藏")
+  @ApiOperation(value = "获取收藏list", notes = "获取收藏list")
   public ResponseDto<List<FoodDto>> collectFood(@RequestParam Long userId) {
+    List<Long> collect = collectRepository.findByUserId(userId).stream().map(UserFoodCollect::getFoodId).collect(Collectors.toList());
 
     return ResponseDto.success("收藏成功");
   }

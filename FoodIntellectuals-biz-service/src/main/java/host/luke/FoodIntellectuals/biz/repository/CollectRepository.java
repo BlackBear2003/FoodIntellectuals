@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface CollectRepository extends JpaRepository<UserFoodCollect, Long> {
   List<UserFoodCollect> findByUserIdAndTypeAndFoodId(Long userId, Integer type, Long foodId);
+  List<UserFoodCollect> findByUserId(Long userId);
 }
