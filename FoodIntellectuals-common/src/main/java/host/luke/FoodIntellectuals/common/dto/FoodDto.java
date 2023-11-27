@@ -9,6 +9,7 @@ public class FoodDto {
   private String foodName;
   private Double price;
   private String intro;
+  private Integer likeNum;
   private List<String> imgUrlList;
 
   public Long getId() {
@@ -49,6 +50,14 @@ public class FoodDto {
 
   public void setIntro(String intro) {
     this.intro = intro;
+  }
+
+  public Integer getLikeNum() {
+    return likeNum;
+  }
+
+  public void setLikeNum(Integer likeNum) {
+    this.likeNum = likeNum;
   }
 
   public List<String> getImgUrlList() {

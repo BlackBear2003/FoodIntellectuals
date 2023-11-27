@@ -5,6 +5,7 @@ public class UserDto {
   private long id;
   private String unionId;
   private String username;
+  private String avatarUrl;
 
   public long getId() {
     return id;
@@ -28,5 +29,13 @@ public class UserDto {
 
   public void setUsername(String username) {
     this.username = username;
+  }
+
+  public String getAvatarUrl() {
+    return avatarUrl;
+  }
+
+  public void setAvatarUrl(String avatarUrl) {
+    this.avatarUrl = avatarUrl;
   }
 }

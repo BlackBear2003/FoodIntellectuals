@@ -75,9 +75,9 @@ CREATE TABLE `Food`
 DROP TABLE IF EXISTS `FoodTag`;
 CREATE TABLE `FoodTag`
 (
-    `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `FoodId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
-    `TagId`   int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'tag ID',
+    `Id`     int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `FoodId` int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
+    `TagId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT 'tag ID',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品Tag关联表';
 
@@ -90,6 +90,31 @@ CREATE TABLE `Tag`
     `TagName` varchar(32) NOT NULL DEFAULT 'default' COMMENT 'Tag名称',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Tag表';
+
+
+DROP TABLE IF EXISTS `FoodComment`;
+
+CREATE TABLE `FoodComment`
+(
+    `Id`          int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `FoodId`      int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
+    `UserId`      int(10) unsigned NOT NULL DEFAULT 0 COMMENT '用户ID',
+    `Content`     varchar(256) NOT NULL DEFAULT 'default' COMMENT '点评内容',
+    `CommentTime` TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '评分时间',
+    PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='评论表';
+
+
+DROP TABLE IF EXISTS `FoodScore`;
+
+CREATE TABLE `FoodScore`
+(
+    `Id`        int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `FoodId`    int(10) unsigned NOT NULL DEFAULT 0 COMMENT '食品ID',
+    `UserId`    int(10) unsigned NOT NULL DEFAULT 0 COMMENT '用户ID',
+    `FoodScore` tinyint unsigned NOT NULL DEFAULT 5 COMMENT '对菜品评分（总评）',
+    PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='评论表';
 
 
 DROP TABLE IF EXISTS `Review`;
@@ -137,9 +162,9 @@ DROP TABLE IF EXISTS `FoodLike`;
 
 CREATE TABLE `FoodLike`
 (
-    `Id`      int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `FoodId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '菜品ID',
-    `UserId`  int(10) unsigned NOT NULL DEFAULT 0 COMMENT '用户ID',
+    `Id`     int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `FoodId` int(10) unsigned NOT NULL DEFAULT 0 COMMENT '菜品ID',
+    `UserId` int(10) unsigned NOT NULL DEFAULT 0 COMMENT '用户ID',
     PRIMARY KEY (`Id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='菜品点赞表';
 
