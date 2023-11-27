@@ -19,7 +19,11 @@
       <groupId>host.luke.FoodIntellectuals</groupId>
       <artifactId>FoodIntellectuals-biz-service</artifactId>
     </dependency>
-
+    <dependency>
+      <groupId>host.luke.FoodIntellectuals</groupId>
+      <artifactId>FoodIntellectuals-rank-service</artifactId>
+      <version>${revision}</version>
+    </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>

@@ -25,7 +25,7 @@ public interface RedisRecordApi {
   void delH(String key, Object... fields);
 
   /* ZSet structure api*/
-  void addZs(String key, Object member, double score);
+  void addZs(String key, Object member, Integer score);
 
   void delZs(String key, Object... members);
 

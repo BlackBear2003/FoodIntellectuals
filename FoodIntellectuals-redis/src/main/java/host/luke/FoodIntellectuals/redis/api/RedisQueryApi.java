@@ -1,5 +1,7 @@
 package host.luke.FoodIntellectuals.redis.api;
 
+import host.luke.FoodIntellectuals.common.dto.FoodRankItem;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -17,5 +19,7 @@ public interface RedisQueryApi {
   /* ZSet*/
   double getZSetMemberScore(String key, Object member);
 
-  List<Object> getTopNFromZSet(String key, long n);
+  <T> List<T> getTopNFromZSet(String key, long n, Class<T> clazz);
+
+  List<FoodRankItem> getTopFoodHotRank();
 }

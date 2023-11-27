@@ -17,16 +17,25 @@ public class Food {
   private String foodName;
   private Double price;
   private String intro;
-
+  private Integer likeNum;
   public Food() {
   }
 
-  public Food(Long id, Long storeId, String foodName, Double price, String intro) {
+  public Integer getLikeNum() {
+    return likeNum;
+  }
+
+  public void setLikeNum(Integer likeNum) {
+    this.likeNum = likeNum;
+  }
+
+  public Food(Long id, Long storeId, String foodName, Double price, String intro, Integer likeNum) {
     this.id = id;
     this.storeId = storeId;
     this.foodName = foodName;
     this.price = price;
     this.intro = intro;
+    this.likeNum = likeNum;
   }
 
   public Long getId() {

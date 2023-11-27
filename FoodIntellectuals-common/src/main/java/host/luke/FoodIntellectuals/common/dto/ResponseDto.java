@@ -12,6 +12,22 @@ public class ResponseDto<T> {
     this.data = data;
   }
 
+  public static <T> ResponseDto<T> success(T data) {
+    ResponseDto<T> dto = new ResponseDto<>();
+    dto.setCode(200);
+    dto.setData(data);
+    dto.setErrorMessage("");
+    return dto;
+  }
+
+  public static <T>  ResponseDto<T> success(T data, String message) {
+    ResponseDto<T> dto = new ResponseDto<>();
+    dto.setCode(200);
+    dto.setData(data);
+    dto.setErrorMessage(message);
+    return dto;
+  }
+
   public ResponseDto() {
   }
 

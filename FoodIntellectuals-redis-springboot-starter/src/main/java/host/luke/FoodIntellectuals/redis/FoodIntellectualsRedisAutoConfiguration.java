@@ -15,7 +15,7 @@ public class FoodIntellectualsRedisAutoConfiguration {
 
   @Bean
   public RedisTemplate<String, Object> redisTemplate(
-      RedisConnectionFactory redisConnectionFactory) {
+    RedisConnectionFactory redisConnectionFactory) {
     RedisTemplate<String, Object> template = new RedisTemplate<>();
     template.setConnectionFactory(redisConnectionFactory);
 

@@ -1,5 +1,7 @@
 package host.luke.FoodIntellectuals.redis.api.impl;
 
+import com.alibaba.fastjson2.JSON;
+import host.luke.FoodIntellectuals.common.dto.FoodRankItem;
 import host.luke.FoodIntellectuals.redis.api.RedisQueryApi;
 import host.luke.FoodIntellectuals.redis.api.RedisRecordApi;
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ZSetOperations;
+
+import static host.luke.FoodIntellectuals.common.constant.HotValueConstant.MQ_HOT_VALUE_KEY;
 
 public class FoodIntellectualsRedisApi implements RedisQueryApi, RedisRecordApi {
 
@@ -42,9 +46,29 @@ public class FoodIntellectualsRedisApi implements RedisQueryApi, RedisRecordApi 
   }
 
   @Override
-  public List<Object> getTopNFromZSet(String key, long n) {
+  public <T> List<T> getTopNFromZSet(String key, long n, Class<T> clazz) {
     ZSetOperations<String, Object> ops = redisTemplate.opsForZSet();
-    return new ArrayList<>(ops.reverseRange(key, 0, n-1));
+    Set<Object> resultSet = ops.reverseRange(key, 0, n - 1);
+    List<T> resultList = new ArrayList<>();
+    for (Object obj : resultSet) {
+     T item = JSON.parseObject(obj.toString(),clazz);
+      resultList.add(item);
+    }
+    return resultList;
+  }
+
+  @Override
+  public List<FoodRankItem> getTopFoodHotRank() {
+   ZSetOperations<String,Object> ops = redisTemplate.opsForZSet();
+   Set<ZSetOperations.TypedTuple<Object>> res = ops.reverseRangeWithScores(MQ_HOT_VALUE_KEY,0,9);
+   List<FoodRankItem> resList = new ArrayList<>();
+    for (ZSetOperations.TypedTuple<Object> re : res) {
+      Object obj = re.getValue();
+      FoodRankItem item = JSON.parseObject(obj.toString(),FoodRankItem.class);
+      item.setValue(re.getScore().intValue());
+      resList.add(item);
+    }
+    return resList;
   }
 
   @Override
@@ -88,8 +112,8 @@ public class FoodIntellectualsRedisApi implements RedisQueryApi, RedisRecordApi 
   }
 
   @Override
-  public void addZs(String key, Object member, double score) {
-    redisTemplate.opsForZSet().add(key, member, score);
+  public void addZs(String key, Object member, Integer score) {
+   redisTemplate.opsForZSet().incrementScore(key, member, score);
   }
 
   @Override
