@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- Review API returning FoodDto contains imageUrls">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/FoodComment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/FoodScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodCommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodScoreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodCommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodLikeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodScoreService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodCommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodLikeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodScoreServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodCommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodLikeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodScoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/FoodCommentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/FoodScoreDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/util/DtoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/util/DtoUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/sql/FoodIntellectuals.sql" afterDir="false" />
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- Food API returning FoodDto contains imageUrls">
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/schedule/ScheduleTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/schedule/ScheduleTask.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
