@@ -26,6 +26,7 @@ public class DtoUtil {
     return dto;
   }
 
+
   public static FoodCommentDto commentToDto(FoodComment comment, User user) {
     FoodCommentDto dto = new FoodCommentDto();
     BeanUtil.copyProperties(comment, dto);
