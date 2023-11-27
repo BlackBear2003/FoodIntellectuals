@@ -19,6 +19,7 @@ public interface FoodRepository extends JpaRepository<Food, Long> {
 
   List<Food> searchFoodsByFoodNameContainingIgnoreCaseAndStoreIdIn(String foodName, Collection<Long> storeId, Pageable pageable);
   List<Food> findTop10ByOrderByLikeNumDesc();
+
   @Query("SELECT f FROM Food f WHERE f.id IN :ids")
   List<Food> findAllByIdIn(@Param("ids") List<Long> ids, Pageable pageable);
   @Query("SELECT f FROM Food f WHERE f.id IN :ids")

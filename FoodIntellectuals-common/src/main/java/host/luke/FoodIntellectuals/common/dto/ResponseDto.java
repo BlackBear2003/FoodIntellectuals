@@ -27,7 +27,13 @@ public class ResponseDto<T> {
     dto.setErrorMessage(message);
     return dto;
   }
-
+  public static <T>  ResponseDto<T> success(String message) {
+    ResponseDto<T> dto = new ResponseDto<>();
+    dto.setCode(200);
+    dto.setData(null);
+    dto.setErrorMessage(message);
+    return dto;
+  }
   public ResponseDto() {
   }
 

@@ -16,15 +16,6 @@ public class UserFoodCollect {
   private Long userId;
   private Long foodId;
 
-  public UserFoodCollect() {
-  }
-
-  public UserFoodCollect(Long id, Long userId, Long foodId) {
-    this.id = id;
-    this.userId = userId;
-    this.foodId = foodId;
-  }
-
   public Long getId() {
     return id;
   }
@@ -48,4 +39,15 @@ public class UserFoodCollect {
   public void setFoodId(Long foodId) {
     this.foodId = foodId;
   }
+
+  public int getType() {
+    return type;
+  }
+
+  public void setType(int type) {
+    this.type = type;
+  }
+
+  private int type;
+
 }

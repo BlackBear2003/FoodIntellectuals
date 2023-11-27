@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- Food API returning FoodDto contains imageUrls">
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/RankController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/consumer/ConsumerSend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/RankService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/impl/RankServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/CollectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/Food.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodLikeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodLikeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/UserFoodCollect.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/UserFoodCollect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/repository/FoodRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/FoodIntellectualsBizApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/FoodIntellectualsBizApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/constant/HotValueConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/constant/HotValueConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/ResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-common/src/main/java/host/luke/FoodIntellectuals/common/dto/ResponseDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-rank-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis-springboot-starter/src/main/java/host/luke/FoodIntellectuals/redis/FoodIntellectualsRedisAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis-springboot-starter/src/main/java/host/luke/FoodIntellectuals/redis/FoodIntellectualsRedisAutoConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisQueryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisQueryApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisRecordApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/RedisRecordApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/impl/FoodIntellectualsRedisApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-redis/src/main/java/host/luke/FoodIntellectuals/redis/api/impl/FoodIntellectualsRedisApi.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +45,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2XKnKuB3aYRiOoxWoM4uqwT133A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -107,6 +95,7 @@
       <recent name="$PROJECT_DIR$/FoodIntellectuals-auth/src/main/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="host.luke.FoodIntellectuals.biz.repository" />
       <recent name="host.luke.FoodIntellectuals.auth.entity" />
       <recent name="host.luke.FoodIntellectuals.biz.service" />
       <recent name="host.luke.FoodIntellectuals.biz" />
@@ -221,7 +210,7 @@
       <workItem from="1700837324891" duration="23047000" />
       <workItem from="1700966519868" duration="7539000" />
       <workItem from="1701088804236" duration="5397000" />
-      <workItem from="1701094269585" duration="29000" />
+      <workItem from="1701094269585" duration="2877000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -461,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701001221254</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="- Food API returning FoodDto contains imageUrls">
+      <created>1701094665286</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1701094665286</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
