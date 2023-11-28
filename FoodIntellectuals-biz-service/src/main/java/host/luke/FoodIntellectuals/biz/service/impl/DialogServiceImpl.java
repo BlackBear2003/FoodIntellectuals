@@ -21,13 +21,14 @@ public class DialogServiceImpl implements DialogService {
 @Autowired
   DialogRepository dialogRepository;
   @Override
-  public void saveDialog(String title, String context, String createTime, MultipartFile file) throws IOException {
+  public void saveDialog(String title, String context, String createTime,MultipartFile file,Long userId) throws IOException {
     byte[] fileBytes = file.getBytes();
     String base64String = Base64.getEncoder().encodeToString(fileBytes);
     String url = ossService.uploadImg(base64String);
     Dialog dialog =new Dialog();
     dialog.setImgUrl(url);
     dialog.setContext(context);
+    dialog.setUserId(userId);
     dialog.setTitle(title);
     dialog.setCreateTime(createTime);
     dialogRepository.save(dialog);

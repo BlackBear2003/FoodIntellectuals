@@ -3,7 +3,7 @@ package host.luke.FoodIntellectuals.biz.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Canteen")
+@Table(name = "Dialog")
 public class Dialog {
 
   @Id

@@ -7,6 +7,6 @@ import java.io.IOException;
 import java.util.List;
 
 public interface DialogService {
-  void saveDialog(String title, String context, String createTime, MultipartFile file) throws IOException;
+  void saveDialog(String title, String context, String createTime, MultipartFile file,Long userId) throws IOException;
   List<Dialog> listDialog(Long userId,Integer page,Integer size);
 }
