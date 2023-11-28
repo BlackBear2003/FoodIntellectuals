@@ -2,12 +2,9 @@ package host.luke.FoodIntellectuals.biz.schedule;
 
 import host.luke.FoodIntellectuals.biz.service.FoodLikeService;
 import host.luke.FoodIntellectuals.biz.service.FoodService;
-import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.redis.api.RedisQueryApi;
-import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -16,14 +13,17 @@ import org.springframework.scheduling.annotation.Scheduled;
 @Configuration
 public class ScheduleTask {
 
-  @Autowired
-  private FoodService foodService;
-  @Autowired
-  private FoodLikeService foodLikeService;
-  @Autowired
-  private RedisQueryApi redisQueryApi;
+  private final FoodService foodService;
+  private final FoodLikeService foodLikeService;
+  private final RedisQueryApi redisQueryApi;
 
   String likeNumKey = "FoodLikeNum";
+
+  public ScheduleTask(FoodService foodService, FoodLikeService foodLikeService, RedisQueryApi redisQueryApi) {
+    this.foodService = foodService;
+    this.foodLikeService = foodLikeService;
+    this.redisQueryApi = redisQueryApi;
+  }
 
   @Scheduled(cron = "0/30 * * * * ?")
   void synchronizedRedisLike() {

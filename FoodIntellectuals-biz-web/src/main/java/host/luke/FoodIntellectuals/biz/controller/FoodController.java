@@ -2,6 +2,7 @@ package host.luke.FoodIntellectuals.biz.controller;
 
 import host.luke.FoodIntellectuals.biz.entity.UserFoodCollect;
 import host.luke.FoodIntellectuals.biz.repository.CollectRepository;
+import host.luke.FoodIntellectuals.biz.repository.FoodRepository;
 import host.luke.FoodIntellectuals.biz.service.AsyncTaskService;
 import host.luke.FoodIntellectuals.biz.service.FoodService;
 import host.luke.FoodIntellectuals.biz.service.FoodTagService;
@@ -32,7 +33,8 @@ public class FoodController {
 
   final
   CollectRepository collectRepository;
-
+@Autowired
+  FoodRepository foodRepository;
   public FoodController(FoodService foodService, FoodTagService foodTagService, AsyncTaskService asyncTaskService, CollectRepository collectRepository) {
     this.foodService = foodService;
     this.foodTagService = foodTagService;
@@ -93,7 +95,7 @@ public class FoodController {
   @ApiOperation(value = "获取收藏list", notes = "获取收藏list")
   public ResponseDto<List<FoodDto>> collectFood(@RequestParam Long userId) {
     List<Long> collect = collectRepository.findByUserId(userId).stream().map(UserFoodCollect::getFoodId).collect(Collectors.toList());
-
+    foodRepository.findAllByIdsWithoutPage(collect);
     return ResponseDto.success("收藏成功");
   }
 }
