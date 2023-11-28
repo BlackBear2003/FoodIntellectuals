@@ -12,4 +12,6 @@ public interface FoodService {
 
   FoodDto findByFoodId(long foodId);
 
+  void updateLikeNumByFoodId(long foodId, int likeNum);
+
 }

@@ -8,6 +8,7 @@ import host.luke.FoodIntellectuals.biz.service.ImageService;
 import host.luke.FoodIntellectuals.biz.util.DtoUtil;
 import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -48,6 +49,15 @@ public class FoodServiceImpl implements FoodService {
 
     return DtoUtil.foodToFoodDto(food,
         imageService.findUrlListByBelongTypeAndId("Food", food.getId()));
+  }
+
+  @Override
+  public void updateLikeNumByFoodId(long foodId, int likeNum) {
+    Optional<Food> food = foodRepository.findById(foodId);
+    if(food.isPresent()) {
+      food.get().setLikeNum(likeNum);
+      foodRepository.save(food.get());
+    }
   }
 
 }
