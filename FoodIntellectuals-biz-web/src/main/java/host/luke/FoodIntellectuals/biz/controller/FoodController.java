@@ -13,6 +13,7 @@ import host.luke.FoodIntellectuals.biz.entity.Food;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -88,6 +89,13 @@ public class FoodController {
       collectRepository.deleteAll(existingRecords);
     }
     return ResponseDto.success("收藏成功");
+  }
+
+  @GetMapping("/is-collect")
+  public ResponseDto<Boolean> isCollected(@RequestParam Long userId, @RequestParam Long foodId) {
+    List<UserFoodCollect> existingRecords = collectRepository.findByUserIdAndTypeAndFoodId(userId, 0, foodId);
+    boolean res = !existingRecords.isEmpty();
+    return ResponseDto.success(res, "");
   }
 
 

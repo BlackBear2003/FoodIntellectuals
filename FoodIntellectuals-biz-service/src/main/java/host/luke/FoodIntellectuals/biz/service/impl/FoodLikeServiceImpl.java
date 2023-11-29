@@ -1,5 +1,6 @@
 package host.luke.FoodIntellectuals.biz.service.impl;
 
+import host.luke.FoodIntellectuals.biz.service.AsyncTaskService;
 import host.luke.FoodIntellectuals.biz.service.FoodLikeService;
 import host.luke.FoodIntellectuals.common.dto.FoodDto;
 import host.luke.FoodIntellectuals.redis.api.RedisQueryApi;
@@ -21,6 +22,8 @@ public class FoodLikeServiceImpl implements FoodLikeService {
   private RedisQueryApi redisQueryApi;
   @Autowired
   private RedisTemplate redisTemplate;
+  @Autowired
+  private AsyncTaskService asyncTaskService;
 
 
   final String likeNumKey = "FoodLikeNum";
@@ -31,6 +34,7 @@ public class FoodLikeServiceImpl implements FoodLikeService {
 
     boolean flag = isLiked(foodId, userId);
     redisRecordApi.setH(key, String.valueOf(userId), !flag);
+
     this.incrementFoodLikeNum(foodId, !flag? 1: -1);
   }
 

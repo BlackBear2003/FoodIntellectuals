@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化">
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="修复店铺关注的bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/DialogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/DialogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodCommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodCommentServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodLikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodLikeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/impl/RankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/impl/RankServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +219,8 @@
       <workItem from="1700837324891" duration="23047000" />
       <workItem from="1700966519868" duration="32342000" />
       <workItem from="1701180973650" duration="201000" />
-      <workItem from="1701254448939" duration="1112000" />
+      <workItem from="1701254448939" duration="3466000" />
+      <workItem from="1701271272089" duration="1927000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -488,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701159256196</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="修复店铺关注的bug">
+      <created>1701255583129</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1701255583129</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +513,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add some functions&#10;&#10;update Review data struct" />
     <MESSAGE value="- finish basic Review-related service layer.&#10;&#10;- Add javadoc to ReviewService.java" />
     <MESSAGE value="- add FoodTag interfaces" />
     <MESSAGE value="- finish some interfaces&#10;&#10;- fix zzz's bugs" />
@@ -531,7 +537,8 @@
     <MESSAGE value="- 辉神加油" />
     <MESSAGE value="- 111" />
     <MESSAGE value="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化" />
+    <MESSAGE value="修复店铺关注的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复店铺关注的bug" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

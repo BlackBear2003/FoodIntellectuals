@@ -4,6 +4,7 @@ import host.luke.FoodIntellectuals.biz.entity.FoodComment;
 import host.luke.FoodIntellectuals.biz.entity.User;
 import host.luke.FoodIntellectuals.biz.repository.FoodCommentRepository;
 import host.luke.FoodIntellectuals.biz.repository.UserRepository;
+import host.luke.FoodIntellectuals.biz.service.AsyncTaskService;
 import host.luke.FoodIntellectuals.biz.service.FoodCommentService;
 import host.luke.FoodIntellectuals.biz.util.DtoUtil;
 import host.luke.FoodIntellectuals.common.dto.FoodCommentDto;
@@ -17,11 +18,13 @@ public class FoodCommentServiceImpl implements FoodCommentService {
 
   private final FoodCommentRepository foodCommentRepository;
   private final UserRepository userRepository;
+  private final AsyncTaskService asyncTaskService;
 
   public FoodCommentServiceImpl(FoodCommentRepository foodCommentRepository,
-      UserRepository userRepository) {
+      UserRepository userRepository, AsyncTaskService asyncTaskService) {
     this.foodCommentRepository = foodCommentRepository;
     this.userRepository = userRepository;
+    this.asyncTaskService = asyncTaskService;
   }
 
   @Override
