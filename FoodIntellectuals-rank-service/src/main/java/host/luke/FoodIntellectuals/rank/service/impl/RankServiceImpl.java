@@ -41,11 +41,12 @@ public class RankServiceImpl implements RankService {
     List<FoodRankItem> itemList = new ArrayList<>();
     for (Food food : topList) {
       FoodRankItem foodRankItem = new FoodRankItem();
-      Image foodImg = imageRepository.findImageByBelongIdAndAndBelongType(food.getId(), "Food");
+      List<Image> imageList = imageRepository.findImagesByBelongTypeAndBelongId("Food", food.getId());
+      Image foodImg = imageList.isEmpty()? null: imageList.get(0);
       foodRankItem.setFoodName(food.getFoodName());
       foodRankItem.setValue(food.getLikeNum());
       foodRankItem.setId(food.getId());
-      foodRankItem.setUrl(foodImg.getUrl());
+      foodRankItem.setUrl(foodImg!=null?foodImg.getUrl():null);
       itemList.add(foodRankItem);
     }
     return ResponseDto.success(itemList);

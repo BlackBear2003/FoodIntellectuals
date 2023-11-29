@@ -60,4 +60,12 @@ public class FoodServiceImpl implements FoodService {
     }
   }
 
+  @Override
+  public List<FoodDto> findByFoodIds(List<Long> ids) {
+    return foodRepository.findAllByIdsWithoutPage(ids).stream()
+        .map(food -> DtoUtil.foodToFoodDto(food,
+            imageService.findUrlListByBelongTypeAndId("Food", food.getId())))
+        .collect(Collectors.toList());
+  }
+
 }

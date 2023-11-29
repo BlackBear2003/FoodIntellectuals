@@ -95,7 +95,7 @@ public class FoodController {
   @ApiOperation(value = "获取收藏list", notes = "获取收藏list")
   public ResponseDto<List<FoodDto>> collectFood(@RequestParam Long userId) {
     List<Long> collect = collectRepository.findByUserId(userId).stream().map(UserFoodCollect::getFoodId).collect(Collectors.toList());
-    foodRepository.findAllByIdsWithoutPage(collect);
-    return ResponseDto.success("收藏成功");
+    List<FoodDto> dtoList = foodService.findByFoodIds(collect);
+    return ResponseDto.success(dtoList, "success");
   }
 }

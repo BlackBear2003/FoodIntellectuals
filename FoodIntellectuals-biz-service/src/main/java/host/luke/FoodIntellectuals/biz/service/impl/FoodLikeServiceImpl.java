@@ -64,6 +64,10 @@ public class FoodLikeServiceImpl implements FoodLikeService {
 
     Object num = map.get(String.valueOf(foodId));
 
+    if (num == null) {
+      return 0;
+    }
+
     return (int) num;
   }
 

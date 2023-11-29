@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="- Food API returning FoodDto contains imageUrls">
+    <list default="true" id="6e2fe67a-1e5a-4719-a71d-8b805bae8bef" name="Changes" comment="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/Dialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/entity/Dialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/DialogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/DialogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/DialogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/DialogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/DialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/DialogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/FoodService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodLikeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodLikeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-service/src/main/java/host/luke/FoodIntellectuals/biz/service/impl/FoodServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-biz-web/src/main/java/host/luke/FoodIntellectuals/biz/controller/FoodController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/impl/RankServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/FoodIntellectuals-rank-service/src/main/java/host/luke/FoodIntellectuals/rank/service/impl/RankServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +76,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.116279066&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2646733&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.ignored.files&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;cd3ce1016e6b3277612bf026f6e08bc6&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;32739c2427797dde1f52101d4cc67a90&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -172,8 +173,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.FoodIntellectualsBizApplication" />
-        <item itemvalue="Spring Boot.FoodIntellectualsAuthApplication" />
         <item itemvalue="JUnit.RedisApiTest.apiTest" />
+        <item itemvalue="Spring Boot.FoodIntellectualsAuthApplication" />
         <item itemvalue="JUnit.TaskTest.testTask" />
       </list>
     </recent_temporary>
@@ -217,7 +218,9 @@
       <workItem from="1700818665981" duration="1483000" />
       <workItem from="1700825462824" duration="4789000" />
       <workItem from="1700837324891" duration="23047000" />
-      <workItem from="1700966519868" duration="30604000" />
+      <workItem from="1700966519868" duration="32342000" />
+      <workItem from="1701180973650" duration="201000" />
+      <workItem from="1701254448939" duration="1112000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1698387162643</created>
@@ -478,21 +481,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701097960739</updated>
     </task>
-    <task id="LOCAL-00038" summary="- Food API returning FoodDto contains imageUrls">
-      <created>1701178192902</created>
+    <task id="LOCAL-00038" summary="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化">
+      <created>1701159256196</created>
       <option name="number" value="00038" />
       <option name="presentableId" value="LOCAL-00038" />
       <option name="project" value="LOCAL" />
-      <updated>1701178192902</updated>
+      <updated>1701159256196</updated>
     </task>
-    <task id="LOCAL-00039" summary="- Food API returning FoodDto contains imageUrls">
-      <created>1701178933726</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1701178933726</updated>
-    </task>
-    <option name="localTasksCounter" value="40" />
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +506,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add interfaces &#10;&#10;update FoodTag's data structure" />
     <MESSAGE value="add some functions&#10;&#10;update Review data struct" />
     <MESSAGE value="- finish basic Review-related service layer.&#10;&#10;- Add javadoc to ReviewService.java" />
     <MESSAGE value="- add FoodTag interfaces" />
@@ -531,11 +526,12 @@
     <MESSAGE value="fixed:原神版本更新" />
     <MESSAGE value="- rebuild project structure" />
     <MESSAGE value="- finish redis auto configure module as a 'starter'" />
+    <MESSAGE value="- Food API returning FoodDto contains imageUrls" />
     <MESSAGE value="- Review API returning FoodDto contains imageUrls" />
     <MESSAGE value="- 辉神加油" />
     <MESSAGE value="- 111" />
-    <MESSAGE value="- Food API returning FoodDto contains imageUrls" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Food API returning FoodDto contains imageUrls" />
+    <MESSAGE value="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成排行榜、点赞功能&#10;&#10;点赞功能完成接入Redis加速判断，接入定时任务完成定时持久化" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

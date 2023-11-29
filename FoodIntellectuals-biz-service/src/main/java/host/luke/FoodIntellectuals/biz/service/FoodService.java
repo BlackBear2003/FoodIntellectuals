@@ -14,4 +14,6 @@ public interface FoodService {
 
   void updateLikeNumByFoodId(long foodId, int likeNum);
 
+  List<FoodDto> findByFoodIds(List<Long> ids);
+
 }
